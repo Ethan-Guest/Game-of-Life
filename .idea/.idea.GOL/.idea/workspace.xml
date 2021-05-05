@@ -4,11 +4,16 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/Dimensions/Dimension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/GOL.Domain.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/Positions/Position.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GOL.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GOL.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,21 +21,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ethan Guest &lt;eguest01@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/.idea/.idea.GOL/.idea/.gitignore" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Class1.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Positions/Position.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Dimension/Dimension.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Dimensions/Dimension.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -65,8 +89,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620222873662</updated>
-      <workItem from="1620222878941" duration="238000" />
+      <workItem from="1620222878941" duration="1005000" />
+      <workItem from="1620225849434" duration="2016000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1620223269863</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620223269863</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,8 +115,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
