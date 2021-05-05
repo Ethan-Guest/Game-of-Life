@@ -11,13 +11,14 @@ namespace GOL
 
         // Drawing colors
         private readonly Color gridColor = Color.Black;
-        private readonly Cell[,] scratchPad = new Cell[30, 30];
 
+        // The ScratchPad array
+        private readonly Cell[,] scratchPad = new Cell[30, 30];
 
         // The Timer class
         private readonly Timer timer = new Timer();
 
-        // The universe and scratchpad array
+        // The universe array
         private readonly Cell[,] universe = new Cell[30, 30];
 
 
@@ -36,6 +37,34 @@ namespace GOL
             timer.Interval = 100; // milliseconds
             timer.Tick += Timer_Tick;
             timer.Enabled = true; // start timer running
+        }
+
+        private int CountNeighborsFinite(int x, int y)
+        {
+            var count = 0;
+            var xLen = universe.GetLength(0);
+            var yLen = universe.GetLength(1);
+
+            for (var yOffset = -1; yOffset <= 1; yOffset++)
+            for (var xOffset = -1; xOffset < +1; xOffset++)
+            {
+                var xCheck = x + xOffset;
+                var yCheck = y + yOffset;
+
+                if (xOffset == 0 && yOffset == 0) continue;
+
+                if (xCheck < 0) continue;
+
+                if (yCheck < 0) continue;
+
+                if (xCheck >= xLen) continue;
+
+                if (yCheck >= yLen) continue;
+
+                if (universe[xCheck, yCheck].CellState == CellState.Alive) count++;
+            }
+
+            return count;
         }
 
         // Calculate the next generation of cells
