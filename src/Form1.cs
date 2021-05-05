@@ -11,13 +11,13 @@ namespace GOL
 
         // Drawing colors
         private readonly Color gridColor = Color.Black;
-
         private readonly Cell[,] scratchPad = new Cell[30, 30];
+
 
         // The Timer class
         private readonly Timer timer = new Timer();
 
-        // The universe array
+        // The universe and scratchpad array
         private readonly Cell[,] universe = new Cell[30, 30];
 
 
