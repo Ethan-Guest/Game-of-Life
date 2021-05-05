@@ -1,27 +1,35 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using GOL.Domain.Cells;
 
 namespace GOL
 {
     public partial class Form1 : Form
     {
-        private readonly Color cellColor = Color.Gray;
+        private readonly Color cellColor = Color.LimeGreen;
 
         // Drawing colors
         private readonly Color gridColor = Color.Black;
+
+        private readonly Cell[,] scratchPad = new Cell[30, 30];
 
         // The Timer class
         private readonly Timer timer = new Timer();
 
         // The universe array
-        private readonly bool[,] universe = new bool[30, 30];
+        private readonly Cell[,] universe = new Cell[30, 30];
+
 
         // Generation count
         private int generations;
 
         public Form1()
         {
+            for (var index0 = 0; index0 < universe.GetLength(0); index0++)
+            for (var index1 = 0; index1 < universe.GetLength(1); index1++)
+                universe[index0, index1] = new Cell();
+
             InitializeComponent();
 
             // Setup the timer
@@ -73,7 +81,7 @@ namespace GOL
                 cellRect.Height = cellHeight;
 
                 // Fill the cell with a brush if alive
-                if (universe[x, y]) e.Graphics.FillRectangle(cellBrush, cellRect);
+                if (universe[x, y].CellState == CellState.Alive) e.Graphics.FillRectangle(cellBrush, cellRect);
 
                 // Outline the cell with a pen
                 e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
@@ -100,7 +108,8 @@ namespace GOL
                 var y = e.Y / cellHeight;
 
                 // Toggle the cell's state
-                universe[x, y] = !universe[x, y];
+                universe[x, y].CellState =
+                    universe[x, y].CellState == CellState.Alive ? CellState.Dead : CellState.Alive;
 
                 // Tell Windows you need to repaint
                 graphicsPanel1.Invalidate();

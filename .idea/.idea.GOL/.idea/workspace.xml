@@ -4,16 +4,13 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/Dimensions/Dimension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/GOL.Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/Positions/Position.cs" afterDir="false" />
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/GOL.Domain/Properties/AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GOL.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GOL.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/GOL.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.Domain/GOL.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +33,10 @@
       <option value="$PROJECT_DIR$/src/GOL.Domain/Positions/Position.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Dimension/Dimension.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Dimensions/Dimension.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.csproj" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
       <option value="$PROJECT_DIR$/src/Form1.cs" />
-      <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
@@ -90,7 +88,8 @@
       <option name="presentableId" value="Default" />
       <updated>1620222873662</updated>
       <workItem from="1620222878941" duration="1005000" />
-      <workItem from="1620225849434" duration="2016000" />
+      <workItem from="1620225849434" duration="4354000" />
+      <workItem from="1620230616072" duration="1098000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -99,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620223269863</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add Cell&#10;add Dimensions&#10;add Positions">
+      <created>1620227888139</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620227888139</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +128,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="add Cell&#10;add Dimensions&#10;add Positions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Cell&#10;add Dimensions&#10;add Positions" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
