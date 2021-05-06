@@ -4,7 +4,7 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="format check">
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
     </list>
@@ -20,9 +20,6 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Game of Life/Game-of-Life/src/Form1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -88,7 +85,8 @@
       <updated>1620222873662</updated>
       <workItem from="1620222878941" duration="1005000" />
       <workItem from="1620225849434" duration="4354000" />
-      <workItem from="1620230616072" duration="2477000" />
+      <workItem from="1620230616072" duration="3349000" />
+      <workItem from="1620266646241" duration="337000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -118,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620232130516</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add CountNeighborsFinite to Form1.cs">
+      <created>1620233450369</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620233450369</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +149,8 @@
     <MESSAGE value="add Cell&#10;add Dimensions&#10;add Positions" />
     <MESSAGE value="adjust Form1.cs" />
     <MESSAGE value="format check" />
-    <option name="LAST_COMMIT_MESSAGE" value="format check" />
+    <MESSAGE value="add CountNeighborsFinite to Form1.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add CountNeighborsFinite to Form1.cs" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

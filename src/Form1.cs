@@ -39,6 +39,7 @@ namespace GOL
             timer.Enabled = true; // start timer running
         }
 
+        // Count neighbor methods
         private int CountNeighborsFinite(int x, int y)
         {
             var count = 0;
@@ -61,6 +62,32 @@ namespace GOL
 
                 if (yCheck >= yLen) continue;
 
+                if (universe[xCheck, yCheck].CellState == CellState.Alive) count++;
+            }
+
+            return count;
+        }
+
+        private int CountNeighborsToroidal(int x, int y)
+        {
+            var count = 0;
+            var xLen = universe.GetLength(0);
+            var yLen = universe.GetLength(1);
+
+            for (var yOffset = -1; yOffset <= 1; yOffset++)
+            for (var xOffset = -1; xOffset <= 1; xOffset++)
+            {
+                var xCheck = x + xOffset;
+                var yCheck = y + yOffset;
+
+                if (xOffset == 0 && yOffset == 0) continue;
+
+                if (xCheck < 0) xCheck = xLen - 1;
+
+                if (yCheck < 0) yCheck = yLen - 1;
+
+                if (xCheck >= xLen) xCheck = 0;
+                if (yCheck >= yLen) yCheck = 0;
                 if (universe[xCheck, yCheck].CellState == CellState.Alive) count++;
             }
 
