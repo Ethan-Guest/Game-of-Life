@@ -10,7 +10,7 @@ namespace GOL
         private readonly Color cellColor = Color.LimeGreen;
 
         // Drawing colors
-        private readonly Color gridColor = Color.Black;
+        private readonly Color gridColor = Color.FromArgb(29, 29, 29);
 
         // The ScratchPad array
         private readonly Cell[,] scratchPad = new Cell[30, 30];
@@ -170,6 +170,11 @@ namespace GOL
                 // Tell Windows you need to repaint
                 graphicsPanel1.Invalidate();
             }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
