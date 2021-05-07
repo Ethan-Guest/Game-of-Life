@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +92,9 @@
       <workItem from="1620266646241" duration="902000" />
       <workItem from="1620324271992" duration="1699000" />
       <workItem from="1620331651693" duration="966000" />
+      <workItem from="1620340756004" duration="98000" />
+      <workItem from="1620349990379" duration="1526000" />
+      <workItem from="1620357200832" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -166,5 +170,24 @@
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Form1.cs</url>
+          <line>114</line>
+          <properties documentPath="C:\Game of Life\Game-of-Life\src\Form1.cs" initialLine="114" containingFunctionPresentation="method 'NextGeneration'">
+            <startOffsets>
+              <option value="3356" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3380" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

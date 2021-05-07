@@ -12,24 +12,27 @@ namespace GOL
         // Drawing colors
         private readonly Color gridColor = Color.FromArgb(29, 29, 29);
 
-        // The ScratchPad array
-        private readonly Cell[,] scratchPad = new Cell[30, 30];
-
         // The Timer class
         private readonly Timer timer = new Timer();
-
-        // The universe array
-        private readonly Cell[,] universe = new Cell[30, 30];
 
 
         // Generation count
         private int generations;
+
+        // The ScratchPad array
+        private Cell[,] scratchPad = new Cell[30, 30];
+
+        // The universe array
+        private Cell[,] universe = new Cell[30, 30];
 
         public Form1()
         {
             for (var index0 = 0; index0 < universe.GetLength(0); index0++)
             for (var index1 = 0; index1 < universe.GetLength(1); index1++)
                 universe[index0, index1] = new Cell();
+            for (var index0 = 0; index0 < scratchPad.GetLength(0); index0++)
+            for (var index1 = 0; index1 < scratchPad.GetLength(1); index1++)
+                scratchPad[index0, index1] = new Cell();
 
             InitializeComponent();
 
@@ -97,6 +100,25 @@ namespace GOL
         // Calculate the next generation of cells
         private void NextGeneration()
         {
+            for (var y = 0; y < universe.GetLength(1); y++)
+                //Iterate through the universe in the x, left to right
+            for (var x = 0; x < universe.GetLength(0); x++)
+            {
+                var count = CountNeighborsToroidal(x, y);
+
+                // Apply rules
+
+                // Should cell live or die
+
+
+                // Turn on/off in scratchPad
+                var temp = universe;
+                universe = scratchPad;
+                scratchPad = temp;
+            }
+
+            // Copy the scratchPad into the universe
+
             // Increment generation count
             generations++;
 
@@ -175,6 +197,16 @@ namespace GOL
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cutToolStripButton_Click(object sender, EventArgs e)
+        {
+            timer.Enabled = true;
+        }
+
+        private void copyToolStripButton_Click(object sender, EventArgs e)
+        {
+            timer.Enabled = false;
         }
     }
 }
