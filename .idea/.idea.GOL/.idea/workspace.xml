@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GOL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +48,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3504929" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -94,7 +92,15 @@
       <workItem from="1620331651693" duration="966000" />
       <workItem from="1620340756004" duration="98000" />
       <workItem from="1620349990379" duration="1526000" />
-      <workItem from="1620357200832" duration="306000" />
+      <workItem from="1620357200832" duration="547000" />
+      <workItem from="1620368865132" duration="821000" />
+      <workItem from="1620443032048" duration="1194000" />
+      <workItem from="1620509610436" duration="2131000" />
+      <workItem from="1620524068859" duration="414000" />
+      <workItem from="1620608947291" duration="1338000" />
+      <workItem from="1620611920988" duration="4922000" />
+      <workItem from="1620671559905" duration="7479000" />
+      <workItem from="1620692120048" duration="410000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -138,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620267020045</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add some stuff">
+      <created>1620357740495</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620357740495</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,28 +179,10 @@
     <MESSAGE value="format check" />
     <MESSAGE value="add CountNeighborsFinite to Form1.cs" />
     <MESSAGE value="finish count neighbors" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish count neighbors" />
+    <MESSAGE value="add some stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some stuff" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Form1.cs</url>
-          <line>114</line>
-          <properties documentPath="C:\Game of Life\Game-of-Life\src\Form1.cs" initialLine="114" containingFunctionPresentation="method 'NextGeneration'">
-            <startOffsets>
-              <option value="3356" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3380" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

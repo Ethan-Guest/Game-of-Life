@@ -107,23 +107,36 @@ namespace GOL
                 var count = CountNeighborsToroidal(x, y);
 
                 // Apply rules
+                if (scratchPad[x, y].CellState == CellState.Alive)
+                {
+                    // Any living cell in the current universe with less than 2 living neighbors dies in the next generation as if by under-population. 
+                    if (count < 2) scratchPad[x, y].CellState = CellState.Dead;
+                    // Any living cell with more than 3 living neighbors will die in the next generation as if by over-population.
+                    if (count > 3) scratchPad[x, y].CellState = CellState.Dead;
+                    // Any living cell with 2 or 3 living neighbors will live on into the next generation. 
+                    if (count == 2 || count == 3) scratchPad[x, y].CellState = CellState.Alive;
+                }
 
+                // Any dead cell with exactly 3 living neighbors will be born into the next generation as if by reproduction. 
+                if (scratchPad[x, y].CellState == CellState.Dead)
+                    if (count == 3)
+                        scratchPad[x, y].CellState = CellState.Alive;
                 // Should cell live or die
 
 
                 // Turn on/off in scratchPad
-                var temp = universe;
-                universe = scratchPad;
-                scratchPad = temp;
             }
 
             // Copy the scratchPad into the universe
-
+            var temp = universe;
+            universe = scratchPad;
+            scratchPad = temp;
             // Increment generation count
             generations++;
 
             // Update status strip generations
             toolStripStatusLabelGenerations.Text = "Generations = " + generations;
+            graphicsPanel1.Invalidate();
         }
 
         // The event called by the timer every Interval milliseconds.
@@ -159,10 +172,27 @@ namespace GOL
                 cellRect.Height = cellHeight;
 
                 // Fill the cell with a brush if alive
-                if (universe[x, y].CellState == CellState.Alive) e.Graphics.FillRectangle(cellBrush, cellRect);
+                if (universe[x, y].CellState == CellState.Alive)
+                {
+                    e.Graphics.FillRectangle(cellBrush, cellRect);
+
+                    var font = new Font("Arial", 20f);
+
+                    var stringFormat = new StringFormat();
+                    stringFormat.Alignment = StringAlignment.Center;
+                    stringFormat.LineAlignment = StringAlignment.Center;
+
+                    var rect = new Rectangle(0, 0, 100, 100);
+                    var cell = universe[x, y];
+                    var neighbors = CountNeighborsToroidal(x, y);
+
+                    e.Graphics.DrawString(neighbors.ToString(), font, Brushes.Red, cellRect, stringFormat);
+                }
+
+                e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
+
 
                 // Outline the cell with a pen
-                e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
             }
 
             // Cleaning up pens and brushes
@@ -188,6 +218,8 @@ namespace GOL
                 // Toggle the cell's state
                 universe[x, y].CellState =
                     universe[x, y].CellState == CellState.Alive ? CellState.Dead : CellState.Alive;
+                scratchPad[x, y].CellState =
+                    scratchPad[x, y].CellState == CellState.Alive ? CellState.Dead : CellState.Alive;
 
                 // Tell Windows you need to repaint
                 graphicsPanel1.Invalidate();
