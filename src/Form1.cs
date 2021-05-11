@@ -15,15 +15,14 @@ namespace GOL
         // The Timer class
         private readonly Timer timer = new Timer();
 
-
         // Generation count
         private int generations;
 
         // The ScratchPad array
-        private Cell[,] scratchPad = new Cell[50, 50];
+        private Cell[,] scratchPad = new Cell[64, 36];
 
         // The universe array
-        private Cell[,] universe = new Cell[50, 50];
+        private Cell[,] universe = new Cell[64, 36];
 
         public Form1()
         {
@@ -33,9 +32,7 @@ namespace GOL
             for (var index0 = 0; index0 < scratchPad.GetLength(0); index0++)
             for (var index1 = 0; index1 < scratchPad.GetLength(1); index1++)
                 scratchPad[index0, index1] = new Cell();
-
             InitializeComponent();
-
             // Setup the timer
             timer.Interval = 100; // milliseconds
             timer.Tick += Timer_Tick;
@@ -45,7 +42,7 @@ namespace GOL
         // Count neighbor methods
         private int CountNeighborsFinite(int x, int y)
         {
-            var count = 0;
+            var liveNeighbors = 0;
             var xLen = universe.GetLength(0);
             var yLen = universe.GetLength(1);
 
@@ -65,15 +62,15 @@ namespace GOL
 
                 if (yCheck >= yLen) continue;
 
-                if (universe[xCheck, yCheck].CellState == CellState.Alive) count++;
+                if (universe[xCheck, yCheck].CellState == CellState.Alive) liveNeighbors++;
             }
 
-            return count;
+            return liveNeighbors;
         }
 
         private int CountNeighborsToroidal(int x, int y)
         {
-            var count = 0;
+            var liveNeighbors = 0;
             var xLen = universe.GetLength(0);
             var yLen = universe.GetLength(1);
 
@@ -91,10 +88,10 @@ namespace GOL
 
                 if (xCheck >= xLen) xCheck = 0;
                 if (yCheck >= yLen) yCheck = 0;
-                if (universe[xCheck, yCheck].CellState == CellState.Alive) count++;
+                if (universe[xCheck, yCheck].CellState == CellState.Alive) liveNeighbors++;
             }
 
-            return count;
+            return liveNeighbors;
         }
 
         // Calculate the next generation of cells
@@ -105,22 +102,19 @@ namespace GOL
             for (var y = 0; y < universe.GetLength(1); y++)
             {
                 scratchPad[x, y].CellState = universe[x, y].CellState;
-                var count = CountNeighborsToroidal(x, y);
+                var liveNeighbors = CountNeighborsToroidal(x, y);
                 // Apply rules
                 // Should cell live or die
                 // Turn on/off in scratchPad
 
                 switch (universe[x, y].CellState)
                 {
-                    // Any living cell in the current universe with less than 2 living neighbors dies in the next generation as if by under-population. 
-                    // Any living cell with more than 3 living neighbors will die in the next generation as if by over-population.
-                    case CellState.Alive when count < 2:
-                    case CellState.Alive when count > 3:
+                    case CellState.Alive when liveNeighbors < 2:
+                    case CellState.Alive when liveNeighbors > 3:
                         scratchPad[x, y].CellState = CellState.Dead;
                         break;
-
-                    case CellState.Alive when count == 2 || count == 3:
-                    case CellState.Dead when count == 3:
+                    case CellState.Alive when liveNeighbors == 2 || liveNeighbors == 3:
+                    case CellState.Dead when liveNeighbors == 3:
                         scratchPad[x, y].CellState = CellState.Alive;
                         break;
                 }
@@ -130,6 +124,7 @@ namespace GOL
             var temp = universe;
             universe = scratchPad;
             scratchPad = temp;
+
             // Increment generation count
             generations++;
 
@@ -169,29 +164,21 @@ namespace GOL
                 cellRect.Y = y * cellHeight;
                 cellRect.Width = cellWidth;
                 cellRect.Height = cellHeight;
-
                 // Fill the cell with a brush if alive
                 if (universe[x, y].CellState == CellState.Alive)
                 {
                     e.Graphics.FillRectangle(cellBrush, cellRect);
-
-                    var font = new Font("Arial", 10f);
-
+                    var font = new Font("Arial", 8f);
                     var stringFormat = new StringFormat();
                     stringFormat.Alignment = StringAlignment.Center;
                     stringFormat.LineAlignment = StringAlignment.Center;
-
                     var rect = new Rectangle(0, 0, 100, 100);
                     var cell = universe[x, y];
                     var neighbors = CountNeighborsToroidal(x, y);
-
-                    e.Graphics.DrawString(neighbors.ToString(), font, Brushes.Red, cellRect, stringFormat);
+                    e.Graphics.DrawString(neighbors.ToString(), font, Brushes.Black, cellRect, stringFormat);
                 }
 
                 e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
-
-
-                // Outline the cell with a pen
             }
 
             // Cleaning up pens and brushes
