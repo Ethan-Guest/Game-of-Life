@@ -234,5 +234,16 @@ namespace GOL
             NextGeneration();
             graphicsPanel1.Invalidate();
         }
+
+        private void newToolStripButton_Click(object sender, EventArgs e)
+        {
+            universe = new Cell[64, 36];
+            for (var index0 = 0; index0 < universe.GetLength(0); index0++)
+            for (var index1 = 0; index1 < universe.GetLength(1); index1++)
+                universe[index0, index1] = new Cell();
+            generations = 0;
+            toolStripStatusLabelGenerations.Text = "Generations = " + generations;
+            graphicsPanel1.Invalidate();
+        }
     }
 }

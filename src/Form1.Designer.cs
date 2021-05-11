@@ -63,6 +63,9 @@ namespace GOL
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelGenerations = new System.Windows.Forms.ToolStripStatusLabel();
             this.graphicsPanel1 = new GOL.GraphicsPanel();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -70,7 +73,7 @@ namespace GOL
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.fileToolStripMenuItem, this.toolsToolStripMenuItem, this.helpToolStripMenuItem});
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.fileToolStripMenuItem, this.toolsToolStripMenuItem, this.helpToolStripMenuItem, this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1536, 24);
@@ -228,6 +231,7 @@ namespace GOL
             this.newToolStripButton.Name = "newToolStripButton";
             this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.newToolStripButton.Text = "&New";
+            this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
             // 
             // openToolStripButton
             // 
@@ -313,6 +317,25 @@ namespace GOL
             this.graphicsPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.graphicsPanel1_Paint);
             this.graphicsPanel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.graphicsPanel1_MouseClick);
             // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.tToolStripMenuItem, this.fToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // tToolStripMenuItem
+            // 
+            this.tToolStripMenuItem.Name = "tToolStripMenuItem";
+            this.tToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tToolStripMenuItem.Text = "T";
+            // 
+            // fToolStripMenuItem
+            // 
+            this.fToolStripMenuItem.Name = "fToolStripMenuItem";
+            this.fToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fToolStripMenuItem.Text = "F";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +358,10 @@ namespace GOL
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fToolStripMenuItem;
 
         #endregion
 
