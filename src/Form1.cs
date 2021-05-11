@@ -20,10 +20,10 @@ namespace GOL
         private int generations;
 
         // The ScratchPad array
-        private Cell[,] scratchPad = new Cell[30, 30];
+        private Cell[,] scratchPad = new Cell[50, 50];
 
         // The universe array
-        private Cell[,] universe = new Cell[30, 30];
+        private Cell[,] universe = new Cell[50, 50];
 
         public Form1()
         {
@@ -175,7 +175,7 @@ namespace GOL
                 {
                     e.Graphics.FillRectangle(cellBrush, cellRect);
 
-                    var font = new Font("Arial", 20f);
+                    var font = new Font("Arial", 10f);
 
                     var stringFormat = new StringFormat();
                     stringFormat.Alignment = StringAlignment.Center;
