@@ -4,7 +4,7 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add rules">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
     </list>
@@ -20,6 +20,9 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Game of Life/Game-of-Life/src/Form1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -100,7 +103,7 @@
       <workItem from="1620608947291" duration="1338000" />
       <workItem from="1620611920988" duration="4922000" />
       <workItem from="1620671559905" duration="7479000" />
-      <workItem from="1620692120048" duration="410000" />
+      <workItem from="1620692120048" duration="2481000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -151,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620357740495</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add rules">
+      <created>1620692553575</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620692553575</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +190,8 @@
     <MESSAGE value="add CountNeighborsFinite to Form1.cs" />
     <MESSAGE value="finish count neighbors" />
     <MESSAGE value="add some stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some stuff" />
+    <MESSAGE value="add rules" />
+    <option name="LAST_COMMIT_MESSAGE" value="add rules" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

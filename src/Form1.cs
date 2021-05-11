@@ -49,8 +49,8 @@ namespace GOL
             var xLen = universe.GetLength(0);
             var yLen = universe.GetLength(1);
 
-            for (var yOffset = -1; yOffset <= 1; yOffset++)
             for (var xOffset = -1; xOffset < +1; xOffset++)
+            for (var yOffset = -1; yOffset <= 1; yOffset++)
             {
                 var xCheck = x + xOffset;
                 var yCheck = y + yOffset;
@@ -77,8 +77,8 @@ namespace GOL
             var xLen = universe.GetLength(0);
             var yLen = universe.GetLength(1);
 
-            for (var yOffset = -1; yOffset <= 1; yOffset++)
             for (var xOffset = -1; xOffset <= 1; xOffset++)
+            for (var yOffset = -1; yOffset <= 1; yOffset++)
             {
                 var xCheck = x + xOffset;
                 var yCheck = y + yOffset;
@@ -100,31 +100,35 @@ namespace GOL
         // Calculate the next generation of cells
         private void NextGeneration()
         {
-            for (var y = 0; y < universe.GetLength(1); y++)
-                //Iterate through the universe in the x, left to right
+            //Iterate through the universe in the x, left to right
             for (var x = 0; x < universe.GetLength(0); x++)
+            for (var y = 0; y < universe.GetLength(1); y++)
             {
                 var count = CountNeighborsToroidal(x, y);
 
                 // Apply rules
-                if (scratchPad[x, y].CellState == CellState.Alive)
-                {
+                // Should cell live or die
+                // Turn on/off in scratchPad
+
+
+                if (universe[x, y].CellState == CellState.Alive && count < 2)
+                    scratchPad[x, y].CellState = CellState.Dead;
+                else if (universe[x, y].CellState == CellState.Alive && count > 3)
+                    scratchPad[x, y].CellState = CellState.Dead;
+                else if (universe[x, y].CellState == CellState.Dead && count == 3)
+                    scratchPad[x, y].CellState = CellState.Alive;
+                else
+                    scratchPad[x, y].CellState = universe[x, y].CellState;
+                /*{
                     // Any living cell in the current universe with less than 2 living neighbors dies in the next generation as if by under-population. 
-                    if (count < 2) scratchPad[x, y].CellState = CellState.Dead;
                     // Any living cell with more than 3 living neighbors will die in the next generation as if by over-population.
-                    if (count > 3) scratchPad[x, y].CellState = CellState.Dead;
                     // Any living cell with 2 or 3 living neighbors will live on into the next generation. 
                     if (count == 2 || count == 3) scratchPad[x, y].CellState = CellState.Alive;
                 }
-
                 // Any dead cell with exactly 3 living neighbors will be born into the next generation as if by reproduction. 
                 if (scratchPad[x, y].CellState == CellState.Dead)
                     if (count == 3)
-                        scratchPad[x, y].CellState = CellState.Alive;
-                // Should cell live or die
-
-
-                // Turn on/off in scratchPad
+                        scratchPad[x, y].CellState = CellState.Alive;*/
             }
 
             // Copy the scratchPad into the universe
