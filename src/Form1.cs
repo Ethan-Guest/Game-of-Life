@@ -45,23 +45,16 @@ namespace GOL
             var liveNeighbors = 0;
             var xLen = universe.GetLength(0);
             var yLen = universe.GetLength(1);
-
             for (var xOffset = -1; xOffset < +1; xOffset++)
             for (var yOffset = -1; yOffset <= 1; yOffset++)
             {
                 var xCheck = x + xOffset;
                 var yCheck = y + yOffset;
-
                 if (xOffset == 0 && yOffset == 0) continue;
-
                 if (xCheck < 0) continue;
-
                 if (yCheck < 0) continue;
-
                 if (xCheck >= xLen) continue;
-
                 if (yCheck >= yLen) continue;
-
                 if (universe[xCheck, yCheck].CellState == CellState.Alive) liveNeighbors++;
             }
 
@@ -73,19 +66,14 @@ namespace GOL
             var liveNeighbors = 0;
             var xLen = universe.GetLength(0);
             var yLen = universe.GetLength(1);
-
             for (var xOffset = -1; xOffset <= 1; xOffset++)
             for (var yOffset = -1; yOffset <= 1; yOffset++)
             {
                 var xCheck = x + xOffset;
                 var yCheck = y + yOffset;
-
                 if (xOffset == 0 && yOffset == 0) continue;
-
                 if (xCheck < 0) xCheck = xLen - 1;
-
                 if (yCheck < 0) yCheck = yLen - 1;
-
                 if (xCheck >= xLen) xCheck = 0;
                 if (yCheck >= yLen) yCheck = 0;
                 if (universe[xCheck, yCheck].CellState == CellState.Alive) liveNeighbors++;
@@ -97,16 +85,11 @@ namespace GOL
         // Calculate the next generation of cells
         private void NextGeneration()
         {
-            //Iterate through the universe in the x, left to right
             for (var x = 0; x < universe.GetLength(0); x++)
             for (var y = 0; y < universe.GetLength(1); y++)
             {
                 scratchPad[x, y].CellState = universe[x, y].CellState;
                 var liveNeighbors = CountNeighborsToroidal(x, y);
-                // Apply rules
-                // Should cell live or die
-                // Turn on/off in scratchPad
-
                 switch (universe[x, y].CellState)
                 {
                     case CellState.Alive when liveNeighbors < 2:
@@ -120,15 +103,10 @@ namespace GOL
                 }
             }
 
-            // Copy the scratchPad into the universe
             var temp = universe;
             universe = scratchPad;
             scratchPad = temp;
-
-            // Increment generation count
             generations++;
-
-            // Update status strip generations
             toolStripStatusLabelGenerations.Text = "Generations = " + generations;
             graphicsPanel1.Invalidate();
         }
@@ -167,6 +145,7 @@ namespace GOL
                 // Fill the cell with a brush if alive
                 if (universe[x, y].CellState == CellState.Alive)
                 {
+                    // Add neighborCount numbers
                     e.Graphics.FillRectangle(cellBrush, cellRect);
                     var font = new Font("Arial", 8f);
                     var stringFormat = new StringFormat();
@@ -212,29 +191,34 @@ namespace GOL
             }
         }
 
+        // Exit
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        //Play
         private void cutToolStripButton_Click(object sender, EventArgs e)
         {
             timer.Enabled = true;
             graphicsPanel1.Invalidate();
         }
 
+        // Pause
         private void copyToolStripButton_Click(object sender, EventArgs e)
         {
             timer.Enabled = false;
             graphicsPanel1.Invalidate();
         }
 
+        // Next
         private void pasteToolStripButton_Click(object sender, EventArgs e)
         {
             NextGeneration();
             graphicsPanel1.Invalidate();
         }
 
+        // New
         private void newToolStripButton_Click(object sender, EventArgs e)
         {
             universe = new Cell[64, 36];

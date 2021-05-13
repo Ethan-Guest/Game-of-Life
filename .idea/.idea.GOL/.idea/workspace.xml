@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Game of Life/Game-of-Life/src/Form1.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/.idea/.idea.GOL/.idea/.gitignore" />
@@ -32,9 +36,9 @@
       <option value="$PROJECT_DIR$/src/GOL.Domain/Dimension/Dimension.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Dimensions/Dimension.cs" />
       <option value="$PROJECT_DIR$/src/GOL.csproj" />
-      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
       <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
       <option value="$PROJECT_DIR$/src/Form1.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
@@ -108,7 +112,9 @@
       <workItem from="1620746756334" duration="1764000" />
       <workItem from="1620758305784" duration="223000" />
       <workItem from="1620758551433" duration="3028000" />
-      <workItem from="1620761617966" duration="1161000" />
+      <workItem from="1620761617966" duration="1212000" />
+      <workItem from="1620843525555" duration="2652000" />
+      <workItem from="1620870963413" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -194,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620759330035</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add new button">
+      <created>1620762822243</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1620762822243</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +241,8 @@
     <MESSAGE value="change stuff" />
     <MESSAGE value="formatting, use switch statement for rules" />
     <MESSAGE value="adjust window size and position" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust window size and position" />
+    <MESSAGE value="add new button" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new button" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
