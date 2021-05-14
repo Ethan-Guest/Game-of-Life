@@ -6,7 +6,6 @@
         {
             CellState = CellState.Dead;
         }
-
         public CellState CellState { get; set; }
         // public Dimension Dimension { get; set; }
         // public Position Position { get; set; }
