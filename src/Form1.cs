@@ -45,7 +45,7 @@ namespace GOL
             var liveNeighbors = 0;
             var xLen = universe.GetLength(0);
             var yLen = universe.GetLength(1);
-            for (var xOffset = -1; xOffset < +1; xOffset++)
+            for (var xOffset = -1; xOffset <= 1; xOffset++)
             for (var yOffset = -1; yOffset <= 1; yOffset++)
             {
                 var xCheck = x + xOffset;
@@ -89,7 +89,9 @@ namespace GOL
             for (var y = 0; y < universe.GetLength(1); y++)
             {
                 scratchPad[x, y].CellState = universe[x, y].CellState;
-                var liveNeighbors = CountNeighborsToroidal(x, y);
+                var liveNeighbors = tToolStripMenuItem.Checked
+                    ? CountNeighborsToroidal(x, y)
+                    : CountNeighborsFinite(x, y);
                 switch (universe[x, y].CellState)
                 {
                     case CellState.Alive when liveNeighbors < 2:
@@ -153,8 +155,10 @@ namespace GOL
                     stringFormat.LineAlignment = StringAlignment.Center;
                     var rect = new Rectangle(0, 0, 100, 100);
                     var cell = universe[x, y];
-                    var neighbors = CountNeighborsToroidal(x, y);
-                    e.Graphics.DrawString(neighbors.ToString(), font, Brushes.Black, cellRect, stringFormat);
+                    var liveNeighbors = tToolStripMenuItem.Checked
+                        ? CountNeighborsToroidal(x, y)
+                        : CountNeighborsFinite(x, y);
+                    e.Graphics.DrawString(liveNeighbors.ToString(), font, Brushes.Black, cellRect, stringFormat);
                 }
 
                 e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
@@ -227,6 +231,36 @@ namespace GOL
                 universe[index0, index1] = new Cell();
             generations = 0;
             toolStripStatusLabelGenerations.Text = "Generations = " + generations;
+            graphicsPanel1.Invalidate();
+        }
+
+
+        // Toroidal
+        private void tToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fToolStripMenuItem.Checked = false;
+            tToolStripMenuItem.Checked = true;
+            graphicsPanel1.Invalidate();
+        }
+
+        // Finite
+        private void fToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tToolStripMenuItem.Checked = false;
+            fToolStripMenuItem.Checked = true;
+            graphicsPanel1.Invalidate();
+        }
+
+        private void fromSeedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var s = new Random(100000);
+            for (var x = 0; x < universe.GetLength(0); x++)
+            for (var y = 0; y < universe.GetLength(1); y++)
+            {
+                var r = s.Next(0, 2);
+                universe[x, y].CellState = r == 0 ? CellState.Alive : CellState.Dead;
+            }
+
             graphicsPanel1.Invalidate();
         }
     }

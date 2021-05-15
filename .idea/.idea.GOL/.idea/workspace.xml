@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +30,11 @@
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Dimension/Dimension.cs" />
       <option value="$PROJECT_DIR$/src/GOL.csproj" />
-      <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
-      <option value="$PROJECT_DIR$/src/Form1.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Dimensions/Dimension.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Positions/Position.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
@@ -53,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="MTHome" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -111,6 +113,12 @@
       <workItem from="1620870963413" duration="520000" />
       <workItem from="1620872362249" duration="14000" />
       <workItem from="1620963030043" duration="21000" />
+      <workItem from="1621021809359" duration="408000" />
+      <workItem from="1621030408694" duration="603000" />
+      <workItem from="1621034302901" duration="210000" />
+      <workItem from="1621035050809" duration="400000" />
+      <workItem from="1621049111969" duration="568000" />
+      <workItem from="1621113335691" duration="2216000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
