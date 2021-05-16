@@ -4,10 +4,7 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GOL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomSeed.Designer.cs" beforeDir="false" />
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="modal box second try">
       <change beforePath="$PROJECT_DIR$/src/RandomSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomSeed.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RandomSeed.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomSeed.resx" afterDir="false" />
     </list>
@@ -123,7 +120,7 @@
       <workItem from="1621049111969" duration="568000" />
       <workItem from="1621113335691" duration="3460000" />
       <workItem from="1621135458064" duration="1012000" />
-      <workItem from="1621181905728" duration="301000" />
+      <workItem from="1621181905728" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -237,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621136465501</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="modal box second try">
+      <created>1621182338301</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621182338301</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +279,8 @@
     <MESSAGE value="formatting, cleanup and commented out positions and dimensions" />
     <MESSAGE value="add option to switch between toroidal and finite, adjusted tool strip items, created logic for randomizing universe." />
     <MESSAGE value="started dialog box" />
-    <option name="LAST_COMMIT_MESSAGE" value="started dialog box" />
+    <MESSAGE value="modal box second try" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal box second try" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
