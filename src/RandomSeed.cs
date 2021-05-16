@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace GOL
 {
@@ -8,11 +7,6 @@ namespace GOL
         public RandomSeed()
         {
             InitializeComponent();
-        }
-
-        private void OkButton_Click(object sender, EventArgs e)
-        {
-            return DialogResult.OK(1);
         }
     }
 }
