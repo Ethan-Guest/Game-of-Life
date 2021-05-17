@@ -4,12 +4,11 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="fixed randomize button">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomSeed.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RandomSeed.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomSeed.resx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +25,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Game of Life/Game-of-Life/src/RandomSeed.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/79/441f55df/Number.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Game of Life/Game-of-Life/src/RandomSeed.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Game of Life/Game-of-Life/src/RandomSeed.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -40,12 +42,13 @@
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
       <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
       <option value="$PROJECT_DIR$/src/RandomSeed.Designer.cs" />
-      <option value="$PROJECT_DIR$/src/Form1.cs" />
       <option value="$PROJECT_DIR$/src/RandomSeed.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
   <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -243,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621136465501</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixed randomize button">
+      <created>1621283742565</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621283742565</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +291,8 @@
     <MESSAGE value="formatting, cleanup and commented out positions and dimensions" />
     <MESSAGE value="add option to switch between toroidal and finite, adjusted tool strip items, created logic for randomizing universe." />
     <MESSAGE value="started dialog box" />
-    <option name="LAST_COMMIT_MESSAGE" value="started dialog box" />
+    <MESSAGE value="fixed randomize button" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed randomize button" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

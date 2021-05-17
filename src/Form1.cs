@@ -85,9 +85,11 @@ namespace GOL
         // Calculate the next generation of cells
         private void NextGeneration()
         {
+            var aliveCells = 0;
             for (var x = 0; x < universe.GetLength(0); x++)
             for (var y = 0; y < universe.GetLength(1); y++)
             {
+                if (universe[x, y].CellState == CellState.Alive) aliveCells++;
                 scratchPad[x, y].CellState = universe[x, y].CellState;
                 var liveNeighbors = tToolStripMenuItem.Checked
                     ? CountNeighborsToroidal(x, y)
@@ -110,6 +112,7 @@ namespace GOL
             scratchPad = temp;
             generations++;
             toolStripStatusLabelGenerations.Text = "Generations = " + generations;
+            AliveCells.Text = "Alive = " + aliveCells;
             graphicsPanel1.Invalidate();
         }
 
