@@ -156,12 +156,11 @@ namespace GOL
                     var stringFormat = new StringFormat();
                     stringFormat.Alignment = StringAlignment.Center;
                     stringFormat.LineAlignment = StringAlignment.Center;
-                    var rect = new Rectangle(0, 0, 100, 100);
-                    var cell = universe[x, y];
                     var liveNeighbors = tToolStripMenuItem.Checked
                         ? CountNeighborsToroidal(x, y)
                         : CountNeighborsFinite(x, y);
-                    e.Graphics.DrawString(liveNeighbors.ToString(), font, Brushes.Black, cellRect, stringFormat);
+                    if (showNeighborCountToolStripMenuItem.Checked)
+                        e.Graphics.DrawString(liveNeighbors.ToString(), font, Brushes.Black, cellRect, stringFormat);
                 }
 
                 e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
@@ -268,7 +267,12 @@ namespace GOL
                 }
             }
 
+            graphicsPanel1.Invalidate();
+        }
 
+        private void showNeighborCountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showNeighborCountToolStripMenuItem.Checked = !showNeighborCountToolStripMenuItem.Checked;
             graphicsPanel1.Invalidate();
         }
     }
