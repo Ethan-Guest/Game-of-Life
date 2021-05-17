@@ -253,13 +253,18 @@ namespace GOL
 
         private void fromSeedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var s = new Random(100000);
-            for (var x = 0; x < universe.GetLength(0); x++)
-            for (var y = 0; y < universe.GetLength(1); y++)
+            var dlg = new RandomSeed();
+            if (DialogResult.OK == dlg.ShowDialog())
             {
-                var r = s.Next(0, 2);
-                universe[x, y].CellState = r == 0 ? CellState.Alive : CellState.Dead;
+                var s = new Random(dlg.SeedValue);
+                for (var x = 0; x < universe.GetLength(0); x++)
+                for (var y = 0; y < universe.GetLength(1); y++)
+                {
+                    var r = s.Next(0, 2);
+                    universe[x, y].CellState = r == 0 ? CellState.Alive : CellState.Dead;
+                }
             }
+
 
             graphicsPanel1.Invalidate();
         }

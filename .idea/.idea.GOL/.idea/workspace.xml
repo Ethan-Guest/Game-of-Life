@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GOL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomSeed.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RandomSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomSeed.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RandomSeed.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomSeed.resx" afterDir="false" />
     </list>
@@ -24,6 +25,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/79/441f55df/Number.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/.idea/.idea.GOL/.idea/.gitignore" />
@@ -35,8 +39,8 @@
       <option value="$PROJECT_DIR$/src/GOL.Domain/Positions/Position.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
       <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
-      <option value="$PROJECT_DIR$/src/Form1.cs" />
       <option value="$PROJECT_DIR$/src/RandomSeed.Designer.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.cs" />
       <option value="$PROJECT_DIR$/src/RandomSeed.cs" />
     </changedPaths>
   </component>
@@ -124,6 +128,8 @@
       <workItem from="1621113335691" duration="3460000" />
       <workItem from="1621135458064" duration="1012000" />
       <workItem from="1621181905728" duration="301000" />
+      <workItem from="1621281062991" duration="734000" />
+      <workItem from="1621281813681" duration="670000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
