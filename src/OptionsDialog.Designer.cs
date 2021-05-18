@@ -36,12 +36,12 @@ namespace GOL
             this.TimerIntervalNumeric = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.WidthBox = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.HeightBox = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize) (this.TimerIntervalNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.WidthBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.HeightBox)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -92,34 +92,32 @@ namespace GOL
             this.label2.TabIndex = 5;
             this.label2.Text = "Universe Width";
             // 
-            // numericUpDown1
+            // WidthBox
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(173, 69);
-            this.numericUpDown1.Maximum = new decimal(new int[] {10000, 0, 0, 0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {1, 0, 0, 0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 4;
-            this.numericUpDown1.Value = new decimal(new int[] {100, 0, 0, 0});
+            this.WidthBox.Location = new System.Drawing.Point(173, 69);
+            this.WidthBox.Minimum = new decimal(new int[] {3, 0, 0, 0});
+            this.WidthBox.Name = "WidthBox";
+            this.WidthBox.Size = new System.Drawing.Size(120, 20);
+            this.WidthBox.TabIndex = 4;
+            this.WidthBox.Value = new decimal(new int[] {64, 0, 0, 0});
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(87, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Universe Width";
+            this.label3.Text = "Universe Height";
             // 
-            // numericUpDown2
+            // HeightBox
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(173, 95);
-            this.numericUpDown2.Maximum = new decimal(new int[] {10000, 0, 0, 0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {1, 0, 0, 0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 6;
-            this.numericUpDown2.Value = new decimal(new int[] {100, 0, 0, 0});
+            this.HeightBox.Location = new System.Drawing.Point(173, 95);
+            this.HeightBox.Minimum = new decimal(new int[] {3, 0, 0, 0});
+            this.HeightBox.Name = "HeightBox";
+            this.HeightBox.Size = new System.Drawing.Size(120, 20);
+            this.HeightBox.TabIndex = 6;
+            this.HeightBox.Value = new decimal(new int[] {36, 0, 0, 0});
             // 
             // OptionsDialog
             // 
@@ -127,9 +125,9 @@ namespace GOL
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 210);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.HeightBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.WidthBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TimerIntervalNumeric);
             this.Controls.Add(this.button2);
@@ -140,11 +138,14 @@ namespace GOL
             this.Name = "OptionsDialog";
             this.Text = "OptionsDialog";
             ((System.ComponentModel.ISupportInitialize) (this.TimerIntervalNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.WidthBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.HeightBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.NumericUpDown WidthBox;
+        private System.Windows.Forms.NumericUpDown HeightBox;
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;

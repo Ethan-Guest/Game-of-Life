@@ -11,10 +11,14 @@ namespace GOL
         }
 
         public int Interval { get; set; }
+        public int UniverseWidth { get; set; }
+        public int UniverseHeight { get; set; }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Interval = int.Parse(TimerIntervalNumeric.Text);
+            UniverseWidth = int.Parse(WidthBox.Text);
+            UniverseHeight = int.Parse(HeightBox.Text);
             DialogResult = DialogResult.OK;
             Close();
         }

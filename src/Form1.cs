@@ -26,17 +26,25 @@ namespace GOL
 
         public Form1()
         {
-            for (var index0 = 0; index0 < universe.GetLength(0); index0++)
-            for (var index1 = 0; index1 < universe.GetLength(1); index1++)
-                universe[index0, index1] = new Cell();
-            for (var index0 = 0; index0 < scratchPad.GetLength(0); index0++)
-            for (var index1 = 0; index1 < scratchPad.GetLength(1); index1++)
-                scratchPad[index0, index1] = new Cell();
+            InitializeUniverse(64, 36);
             InitializeComponent();
             // Setup the timer
             timer.Interval = 100; // milliseconds
             timer.Tick += Timer_Tick;
             timer.Enabled = true; // start timer running
+        }
+
+        private void InitializeUniverse(int width, int height)
+        {
+            universe = new Cell[width, height];
+            for (var index0 = 0; index0 < universe.GetLength(0); index0++)
+            for (var index1 = 0; index1 < universe.GetLength(1); index1++)
+                universe[index0, index1] = new Cell();
+
+            scratchPad = new Cell[width, height];
+            for (var index0 = 0; index0 < scratchPad.GetLength(0); index0++)
+            for (var index1 = 0; index1 < scratchPad.GetLength(1); index1++)
+                scratchPad[index0, index1] = new Cell();
         }
 
         // Count neighbor methods
@@ -227,10 +235,7 @@ namespace GOL
         // New
         private void newToolStripButton_Click(object sender, EventArgs e)
         {
-            universe = new Cell[64, 36];
-            for (var index0 = 0; index0 < universe.GetLength(0); index0++)
-            for (var index1 = 0; index1 < universe.GetLength(1); index1++)
-                universe[index0, index1] = new Cell();
+            InitializeUniverse(64, 36);
             generations = 0;
             toolStripStatusLabelGenerations.Text = "Generations = " + generations;
             graphicsPanel1.Invalidate();
@@ -282,7 +287,11 @@ namespace GOL
             if (DialogResult.OK != dlg.ShowDialog())
                 return;
             var interval = dlg.Interval;
+            var universeWidth = dlg.UniverseWidth;
+            var universeHeight = dlg.UniverseHeight;
             timer.Interval = interval;
+            InitializeUniverse(universeWidth, universeHeight);
+            graphicsPanel1.Invalidate();
         }
     }
 }
