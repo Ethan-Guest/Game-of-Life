@@ -67,6 +67,7 @@ namespace GOL
             this.SeedValueInput.Name = "SeedValueInput";
             this.SeedValueInput.Size = new System.Drawing.Size(120, 20);
             this.SeedValueInput.TabIndex = 2;
+            this.SeedValueInput.Value = new decimal(new int[] {999, 0, 0, 0});
             // 
             // button3
             // 
@@ -95,6 +96,7 @@ namespace GOL
             this.Name = "RandomSeed";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RandomSeed";
+            this.Load += new System.EventHandler(this.RandomSeed_Load);
             ((System.ComponentModel.ISupportInitialize) (this.SeedValueInput)).EndInit();
             this.ResumeLayout(false);
         }

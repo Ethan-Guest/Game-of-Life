@@ -27,6 +27,16 @@ namespace GOL
 
         private void button3_Click(object sender, EventArgs e)
         {
+            RandomSeedGenerator();
+        }
+
+        private void RandomSeed_Load(object sender, EventArgs e)
+        {
+            RandomSeedGenerator();
+        }
+
+        private void RandomSeedGenerator()
+        {
             var r = new Random();
             SeedValueInput.Text = r.Next(-2147483648, 2147483647).ToString();
         }
