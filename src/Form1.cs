@@ -275,5 +275,14 @@ namespace GOL
             showNeighborCountToolStripMenuItem.Checked = !showNeighborCountToolStripMenuItem.Checked;
             graphicsPanel1.Invalidate();
         }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dlg = new OptionsDialog();
+            if (DialogResult.OK != dlg.ShowDialog())
+                return;
+            var interval = dlg.Interval;
+            timer.Interval = interval;
+        }
     }
 }
