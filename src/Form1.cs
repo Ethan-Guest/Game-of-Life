@@ -119,8 +119,9 @@ namespace GOL
             universe = scratchPad;
             scratchPad = temp;
             generations++;
-            toolStripStatusLabelGenerations.Text = "Generations = " + generations;
-            AliveCells.Text = "Alive = " + aliveCells;
+            toolStripStatusLabelGenerations.Text = $"Generations = {generations}";
+            AliveCells.Text = $"Alive = {aliveCells}";
+
             graphicsPanel1.Invalidate();
         }
 
@@ -171,7 +172,8 @@ namespace GOL
                         e.Graphics.DrawString(liveNeighbors.ToString(), font, Brushes.Black, cellRect, stringFormat);
                 }
 
-                e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
+                if (gridToolStripMenuItem.Checked)
+                    e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
             }
 
             // Cleaning up pens and brushes
@@ -237,7 +239,8 @@ namespace GOL
         {
             InitializeUniverse(64, 36);
             generations = 0;
-            toolStripStatusLabelGenerations.Text = "Generations = " + generations;
+            toolStripStatusLabelGenerations.Text = $"Generations = {generations}";
+            AliveCells.Text = $"Alive = {0}";
             graphicsPanel1.Invalidate();
         }
 
@@ -291,6 +294,11 @@ namespace GOL
             var universeHeight = dlg.UniverseHeight;
             timer.Interval = interval;
             InitializeUniverse(universeWidth, universeHeight);
+            graphicsPanel1.Invalidate();
+        }
+
+        private void gridToolStripMenuItem_CheckStateChanged(object sender, EventArgs e)
+        {
             graphicsPanel1.Invalidate();
         }
     }
