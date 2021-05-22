@@ -119,8 +119,8 @@ namespace GOL
             universe = scratchPad;
             scratchPad = temp;
             generations++;
-            toolStripStatusLabelGenerations.Text = $"Generations = {generations}";
-            AliveCells.Text = $"Alive = {aliveCells}";
+            toolStripStatusLabelGenerations.Text = $@"Generations = {generations}";
+            AliveCells.Text = $@"Alive = {aliveCells}";
 
             graphicsPanel1.Invalidate();
         }
@@ -299,6 +299,19 @@ namespace GOL
 
         private void gridToolStripMenuItem_CheckStateChanged(object sender, EventArgs e)
         {
+            graphicsPanel1.Invalidate();
+        }
+
+        private void fromTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var s = new Random();
+            for (var x = 0; x < universe.GetLength(0); x++)
+            for (var y = 0; y < universe.GetLength(1); y++)
+            {
+                var r = s.Next(0, 2);
+                universe[x, y].CellState = r == 0 ? CellState.Alive : CellState.Dead;
+            }
+
             graphicsPanel1.Invalidate();
         }
     }
