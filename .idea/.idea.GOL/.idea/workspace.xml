@@ -7,11 +7,12 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add color dialog for cell and grid">
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add back color dialog">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Settings.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/79/441f55df/Number.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Game of Life/Game-of-Life/src/Form1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -45,6 +47,8 @@
       <option value="$PROJECT_DIR$/src/OptionsDialog.Designer.cs" />
       <option value="$PROJECT_DIR$/src/OptionsDialog.cs" />
       <option value="$PROJECT_DIR$/src/RandomSeed.cs" />
+      <option value="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" />
+      <option value="$PROJECT_DIR$/src/Properties/Settings.settings" />
       <option value="$PROJECT_DIR$/src/Form1.cs" />
     </changedPaths>
   </component>
@@ -310,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621799622678</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add back color dialog">
+      <created>1621800465276</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1621800465276</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +367,8 @@
     <MESSAGE value="random seed is now generated when seed dialog is loaded" />
     <MESSAGE value="fixed alive count when creating new universe, show and hide grid option added to view menu" />
     <MESSAGE value="add color dialog for cell and grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="add color dialog for cell and grid" />
+    <MESSAGE value="add back color dialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="add back color dialog" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

@@ -22,5 +22,41 @@ namespace GOL.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("64")]
+        public int UniverseWidth {
+            get {
+                return ((int)(this["UniverseWidth"]));
+            }
+            set {
+                this["UniverseWidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("36")]
+        public int UniverseHeight {
+            get {
+                return ((int)(this["UniverseHeight"]));
+            }
+            set {
+                this["UniverseHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int Interval {
+            get {
+                return ((int)(this["Interval"]));
+            }
+            set {
+                this["Interval"] = value;
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using GOL.Domain.Cells;
+using GOL.Properties;
 
 namespace GOL
 {
@@ -19,17 +20,17 @@ namespace GOL
         private Color gridColor = Color.FromArgb(29, 29, 29);
 
         // The ScratchPad array
-        private Cell[,] scratchPad = new Cell[64, 36];
+        private Cell[,] scratchPad;
 
         // The universe array
-        private Cell[,] universe = new Cell[64, 36];
+        private Cell[,] universe;
 
         public Form1()
         {
-            InitializeUniverse(64, 36);
+            InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
             InitializeComponent();
             // Setup the timer
-            timer.Interval = 100; // milliseconds
+            timer.Interval = Settings.Default.Interval; // milliseconds
             timer.Tick += Timer_Tick;
             timer.Enabled = true; // start timer running
         }
@@ -237,7 +238,7 @@ namespace GOL
         // New
         private void newToolStripButton_Click(object sender, EventArgs e)
         {
-            InitializeUniverse(64, 36);
+            InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
             generations = 0;
             toolStripStatusLabelGenerations.Text = $"Generations = {generations}";
             AliveCells.Text = $"Alive = {0}";
@@ -293,6 +294,10 @@ namespace GOL
             var universeWidth = dlg.UniverseWidth;
             var universeHeight = dlg.UniverseHeight;
             timer.Interval = interval;
+            Settings.Default.UniverseWidth = universeWidth;
+            Settings.Default.UniverseHeight = universeHeight;
+            Settings.Default.Interval = interval;
+            Settings.Default.Save();
             InitializeUniverse(universeWidth, universeHeight);
             graphicsPanel1.Invalidate();
         }
