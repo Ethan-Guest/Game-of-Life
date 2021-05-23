@@ -217,34 +217,44 @@ namespace GOL
             }
         }
 
-        // Exit
+        /// <summary>
+        ///     Exit game option
+        /// </summary>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        //Play
+        /// <summary>
+        ///     Start game tool strip button
+        /// </summary>
         private void cutToolStripButton_Click(object sender, EventArgs e)
         {
             timer.Enabled = true;
             graphicsPanel1.Invalidate();
         }
 
-        // Pause
+        /// <summary>
+        ///     Pause game tool strip button
+        /// </summary>
         private void copyToolStripButton_Click(object sender, EventArgs e)
         {
             timer.Enabled = false;
             graphicsPanel1.Invalidate();
         }
 
-        // Next
+        /// <summary>
+        ///     Move onto next generation tool strip button
+        /// </summary>
         private void pasteToolStripButton_Click(object sender, EventArgs e)
         {
             NextGeneration();
             graphicsPanel1.Invalidate();
         }
 
-        // New
+        /// <summary>
+        ///     Create new universe tool strip button
+        /// </summary>
         private void newToolStripButton_Click(object sender, EventArgs e)
         {
             InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
@@ -255,7 +265,9 @@ namespace GOL
         }
 
 
-        // Toroidal
+        /// <summary>
+        ///     Toggle toroidal neighbor count method
+        /// </summary>
         private void tToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fToolStripMenuItem.Checked = false;
@@ -263,7 +275,9 @@ namespace GOL
             graphicsPanel1.Invalidate();
         }
 
-        // Finite
+        /// <summary>
+        ///     Toggle finite neighbor count method
+        /// </summary>
         private void fToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tToolStripMenuItem.Checked = false;
@@ -271,6 +285,9 @@ namespace GOL
             graphicsPanel1.Invalidate();
         }
 
+        /// <summary>
+        ///     Randomize from seed
+        /// </summary>
         private void fromSeedToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dlg = new RandomSeed();
@@ -288,6 +305,25 @@ namespace GOL
             graphicsPanel1.Invalidate();
         }
 
+        /// <summary>
+        ///     Randomize from time
+        /// </summary>
+        private void fromTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var s = new Random();
+            for (var x = 0; x < universe.GetLength(0); x++)
+            for (var y = 0; y < universe.GetLength(1); y++)
+            {
+                var r = s.Next(0, 2);
+                universe[x, y].CellState = r == 0 ? CellState.Alive : CellState.Dead;
+            }
+
+            graphicsPanel1.Invalidate();
+        }
+
+        /// <summary>
+        ///     Toggle neighbor count text
+        /// </summary>
         private void showNeighborCountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showNeighborCountToolStripMenuItem.Checked = !showNeighborCountToolStripMenuItem.Checked;
@@ -310,24 +346,17 @@ namespace GOL
             graphicsPanel1.Invalidate();
         }
 
+        /// <summary>
+        ///     Toggle grid
+        /// </summary>
         private void gridToolStripMenuItem_CheckStateChanged(object sender, EventArgs e)
         {
             graphicsPanel1.Invalidate();
         }
 
-        private void fromTimeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var s = new Random();
-            for (var x = 0; x < universe.GetLength(0); x++)
-            for (var y = 0; y < universe.GetLength(1); y++)
-            {
-                var r = s.Next(0, 2);
-                universe[x, y].CellState = r == 0 ? CellState.Alive : CellState.Dead;
-            }
-
-            graphicsPanel1.Invalidate();
-        }
-
+        /// <summary>
+        ///     Cell color dialog
+        /// </summary>
         private void cellColorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dlg = new ColorDialog();
@@ -340,6 +369,9 @@ namespace GOL
             }
         }
 
+        /// <summary>
+        ///     Grid color dialog
+        /// </summary>
         private void gridColorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dlg = new ColorDialog();
@@ -352,6 +384,9 @@ namespace GOL
             }
         }
 
+        /// <summary>
+        ///     Background color dialog
+        /// </summary>
         private void backColorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dlg = new ColorDialog();
@@ -364,6 +399,9 @@ namespace GOL
             }
         }
 
+        /// <summary>
+        ///     Reset settings to default
+        /// </summary>
         private void resetToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Settings.Default.Reset();
@@ -375,7 +413,7 @@ namespace GOL
         }
 
         /// <summary>
-        ///     Reload
+        ///     Reload settings to previous saved settings
         /// </summary>
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -387,6 +425,9 @@ namespace GOL
             timer.Interval = Settings.Default.Interval;
         }
 
+        /// <summary>
+        ///     Save settings when the forms box is closed
+        /// </summary>
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Settings.Default.Save();
