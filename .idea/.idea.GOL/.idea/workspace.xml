@@ -7,14 +7,14 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add saving settings">
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="finished saving settings, add reload + reset option">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Settings.settings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/Dimensions/Dimension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/GOL.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.Domain/GOL.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/Positions/Position.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +38,10 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/.idea/.idea.GOL/.idea/.gitignore" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Class1.cs" />
-      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Dimension/Dimension.cs" />
       <option value="$PROJECT_DIR$/src/GOL.csproj" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Dimensions/Dimension.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Positions/Position.cs" />
-      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
       <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
       <option value="$PROJECT_DIR$/src/RandomSeed.Designer.cs" />
       <option value="$PROJECT_DIR$/src/OptionsDialog.Designer.cs" />
@@ -52,6 +50,8 @@
       <option value="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" />
       <option value="$PROJECT_DIR$/src/Properties/Settings.settings" />
       <option value="$PROJECT_DIR$/src/Form1.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
@@ -330,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621801263643</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="finished saving settings, add reload + reset option">
+      <created>1621803156550</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1621803156550</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +359,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add Cell&#10;add Dimensions&#10;add Positions" />
     <MESSAGE value="adjust Form1.cs" />
     <MESSAGE value="format check" />
     <MESSAGE value="add CountNeighborsFinite to Form1.cs" />
@@ -377,7 +383,8 @@
     <MESSAGE value="add color dialog for cell and grid" />
     <MESSAGE value="add back color dialog" />
     <MESSAGE value="add saving settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="add saving settings" />
+    <MESSAGE value="finished saving settings, add reload + reset option" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished saving settings, add reload + reset option" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

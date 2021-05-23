@@ -11,6 +11,7 @@ namespace GOL
         // The Timer class
         private readonly Timer timer = new Timer();
 
+        // Color of the cell
         private Color cellColor = Color.LimeGreen;
 
         // Generation count
@@ -38,6 +39,11 @@ namespace GOL
             gridColor = Settings.Default.GridColor;
         }
 
+        /// <summary>
+        ///     Initialize a new universe
+        /// </summary>
+        /// <param name="width">Width of the universe</param>
+        /// <param name="height">Height of the universe</param>
         private void InitializeUniverse(int width, int height)
         {
             universe = new Cell[width, height];
@@ -368,6 +374,9 @@ namespace GOL
             timer.Interval = Settings.Default.Interval;
         }
 
+        /// <summary>
+        ///     Reload
+        /// </summary>
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Settings.Default.Reload();

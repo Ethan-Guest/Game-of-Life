@@ -40,8 +40,6 @@
     <ItemGroup>
         <Compile Include="Cells\Cell.cs"/>
         <Compile Include="Cells\CellState.cs"/>
-        <Compile Include="Dimensions\Dimension.cs"/>
-        <Compile Include="Positions\Position.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>

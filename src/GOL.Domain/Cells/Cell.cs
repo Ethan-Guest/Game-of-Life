@@ -2,13 +2,13 @@
 {
     public class Cell
     {
+        // Initialize cell to start dead
         public Cell()
         {
             CellState = CellState.Dead;
         }
+
+        // State of the cell
         public CellState CellState { get; set; }
-        // public Dimension Dimension { get; set; }
-        // public Position Position { get; set; }
-        //public int Generations { get; set; }
     }
 }
