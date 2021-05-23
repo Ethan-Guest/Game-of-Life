@@ -9,6 +9,7 @@ namespace GOL
     {
         // The Timer class
         private readonly Timer timer = new Timer();
+
         private Color cellColor = Color.LimeGreen;
 
         // Generation count
@@ -332,6 +333,17 @@ namespace GOL
             if (DialogResult.OK == dlg.ShowDialog())
             {
                 gridColor = dlg.Color;
+                graphicsPanel1.Invalidate();
+            }
+        }
+
+        private void backColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dlg = new ColorDialog();
+            dlg.Color = graphicsPanel1.BackColor;
+            if (DialogResult.OK == dlg.ShowDialog())
+            {
+                graphicsPanel1.BackColor = dlg.Color;
                 graphicsPanel1.Invalidate();
             }
         }

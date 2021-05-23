@@ -7,8 +7,7 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/shelf/Uncommitted_changes_before_Update_at_5_17_2021_15_25__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/shelf/Uncommitted_changes_before_Update_at_5_17_2021_15_25__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add color dialog for cell and grid">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
@@ -304,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621381707476</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add color dialog for cell and grid">
+      <created>1621799622678</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1621799622678</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +355,8 @@
     <MESSAGE value="add adjust size of universe through dialog box - settings &lt; options" />
     <MESSAGE value="random seed is now generated when seed dialog is loaded" />
     <MESSAGE value="fixed alive count when creating new universe, show and hide grid option added to view menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed alive count when creating new universe, show and hide grid option added to view menu" />
+    <MESSAGE value="add color dialog for cell and grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="add color dialog for cell and grid" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
