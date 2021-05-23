@@ -7,16 +7,15 @@ namespace GOL
 {
     public partial class Form1 : Form
     {
-        private readonly Color cellColor = Color.LimeGreen;
-
-        // Drawing colors
-        private readonly Color gridColor = Color.FromArgb(29, 29, 29);
-
         // The Timer class
         private readonly Timer timer = new Timer();
+        private Color cellColor = Color.LimeGreen;
 
         // Generation count
         private int generations;
+
+        // Drawing colors
+        private Color gridColor = Color.FromArgb(29, 29, 29);
 
         // The ScratchPad array
         private Cell[,] scratchPad = new Cell[64, 36];
@@ -313,6 +312,28 @@ namespace GOL
             }
 
             graphicsPanel1.Invalidate();
+        }
+
+        private void cellColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dlg = new ColorDialog();
+            dlg.Color = cellColor;
+            if (DialogResult.OK == dlg.ShowDialog())
+            {
+                cellColor = dlg.Color;
+                graphicsPanel1.Invalidate();
+            }
+        }
+
+        private void gridColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dlg = new ColorDialog();
+            dlg.Color = gridColor;
+            if (DialogResult.OK == dlg.ShowDialog())
+            {
+                gridColor = dlg.Color;
+                graphicsPanel1.Invalidate();
+            }
         }
     }
 }
