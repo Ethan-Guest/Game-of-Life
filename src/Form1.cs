@@ -33,6 +33,9 @@ namespace GOL
             timer.Interval = Settings.Default.Interval; // milliseconds
             timer.Tick += Timer_Tick;
             timer.Enabled = true; // start timer running
+            graphicsPanel1.BackColor = Settings.Default.BackColor;
+            cellColor = Settings.Default.CellColor;
+            gridColor = Settings.Default.GridColor;
         }
 
         private void InitializeUniverse(int width, int height)
@@ -297,7 +300,6 @@ namespace GOL
             Settings.Default.UniverseWidth = universeWidth;
             Settings.Default.UniverseHeight = universeHeight;
             Settings.Default.Interval = interval;
-            Settings.Default.Save();
             InitializeUniverse(universeWidth, universeHeight);
             graphicsPanel1.Invalidate();
         }
@@ -327,6 +329,7 @@ namespace GOL
             if (DialogResult.OK == dlg.ShowDialog())
             {
                 cellColor = dlg.Color;
+                Settings.Default.CellColor = dlg.Color;
                 graphicsPanel1.Invalidate();
             }
         }
@@ -338,6 +341,7 @@ namespace GOL
             if (DialogResult.OK == dlg.ShowDialog())
             {
                 gridColor = dlg.Color;
+                Settings.Default.GridColor = dlg.Color;
                 graphicsPanel1.Invalidate();
             }
         }
@@ -349,8 +353,34 @@ namespace GOL
             if (DialogResult.OK == dlg.ShowDialog())
             {
                 graphicsPanel1.BackColor = dlg.Color;
+                Settings.Default.BackColor = dlg.Color;
                 graphicsPanel1.Invalidate();
             }
+        }
+
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Reset();
+            graphicsPanel1.BackColor = Settings.Default.BackColor;
+            cellColor = Settings.Default.CellColor;
+            gridColor = Settings.Default.GridColor;
+            InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
+            timer.Interval = Settings.Default.Interval;
+        }
+
+        private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Reload();
+            graphicsPanel1.BackColor = Settings.Default.BackColor;
+            cellColor = Settings.Default.CellColor;
+            gridColor = Settings.Default.GridColor;
+            InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
+            timer.Interval = Settings.Default.Interval;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.Save();
         }
     }
 }

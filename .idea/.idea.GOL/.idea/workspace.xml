@@ -7,10 +7,12 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add back color dialog">
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add saving settings">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Settings.settings" afterDir="false" />
     </list>
@@ -321,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621800465276</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add saving settings">
+      <created>1621801263643</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1621801263643</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +352,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="initial commit" />
     <MESSAGE value="add Cell&#10;add Dimensions&#10;add Positions" />
     <MESSAGE value="adjust Form1.cs" />
     <MESSAGE value="format check" />
@@ -368,7 +376,8 @@
     <MESSAGE value="fixed alive count when creating new universe, show and hide grid option added to view menu" />
     <MESSAGE value="add color dialog for cell and grid" />
     <MESSAGE value="add back color dialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="add back color dialog" />
+    <MESSAGE value="add saving settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="add saving settings" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
