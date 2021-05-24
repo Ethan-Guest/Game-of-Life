@@ -467,5 +467,61 @@ namespace GOL
                 writer.Close();
             }
         }
+
+        private void openToolStripButton_Click(object sender, EventArgs e)
+        {
+            var dlg = new OpenFileDialog();
+            dlg.Filter = "All Files|*.*|Cells|*.cells";
+            dlg.FilterIndex = 2;
+
+            if (DialogResult.OK == dlg.ShowDialog())
+            {
+                var reader = new StreamReader(dlg.FileName);
+                var maxWidth = 0;
+                var maxHeight = 0;
+                var yPos = 0;
+
+                // Iterate through the file once to get its size.
+                while (!reader.EndOfStream)
+                {
+                    // Read one row at a time.
+                    var row = reader.ReadLine();
+
+                    // If the row begins with '!' then it is a comment
+                    // and should be ignored.
+                    if (row[0] == '!') continue;
+
+                    // If the row is not a comment then it is a row of cells.
+                    // Increment the maxHeight variable for each row read.
+
+                    maxHeight++;
+
+                    // Get the length of the current row string
+                    // and adjust the maxWidth variable if necessary.
+
+                    maxWidth = row.Length;
+                }
+
+                InitializeUniverse(maxWidth, maxHeight);
+
+                // Reset the file pointer back to the beginning of the file.
+                reader.BaseStream.Seek(0, SeekOrigin.Begin);
+
+                // Iterate through the file again, this time reading in the cells.
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine();
+
+                    if (row[0] == '!') continue;
+
+                    for (var xPos = 0; xPos < row.Length; xPos++)
+                        universe[xPos, yPos].CellState = row[xPos] == 'O' ? CellState.Alive : CellState.Dead;
+                    yPos++;
+                }
+
+                reader.Close();
+                graphicsPanel1.Invalidate();
+            }
+        }
     }
 }
