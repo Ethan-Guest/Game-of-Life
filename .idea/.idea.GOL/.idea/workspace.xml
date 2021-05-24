@@ -7,9 +7,11 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="update readme">
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add documentation to Form1.cs">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptionsDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptionsDialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RandomSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomSeed.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,14 +40,14 @@
       <option value="$PROJECT_DIR$/src/GOL.Domain/Positions/Position.cs" />
       <option value="$PROJECT_DIR$/src/RandomSeed.Designer.cs" />
       <option value="$PROJECT_DIR$/src/OptionsDialog.Designer.cs" />
-      <option value="$PROJECT_DIR$/src/OptionsDialog.cs" />
-      <option value="$PROJECT_DIR$/src/RandomSeed.cs" />
       <option value="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" />
       <option value="$PROJECT_DIR$/src/Properties/Settings.settings" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" />
-      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
       <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
       <option value="$PROJECT_DIR$/src/Form1.cs" />
+      <option value="$PROJECT_DIR$/src/OptionsDialog.cs" />
+      <option value="$PROJECT_DIR$/src/RandomSeed.cs" />
+      <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
@@ -150,7 +152,7 @@
       <workItem from="1621866470206" duration="2264000" />
       <workItem from="1621868764949" duration="643000" />
       <workItem from="1621887061938" duration="180000" />
-      <workItem from="1621887256390" duration="1782000" />
+      <workItem from="1621887256390" duration="2583000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -425,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621887268964</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="add documentation to Form1.cs">
+      <created>1621889078343</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1621889078343</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +456,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add option to switch between toroidal and finite, adjusted tool strip items, created logic for randomizing universe." />
     <MESSAGE value="started dialog box" />
     <MESSAGE value="fixed randomize button" />
     <MESSAGE value="added alive cells status strip" />
@@ -472,7 +480,8 @@
     <MESSAGE value="fix heads up display" />
     <MESSAGE value="fix hud" />
     <MESSAGE value="update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
+    <MESSAGE value="add documentation to Form1.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add documentation to Form1.cs" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

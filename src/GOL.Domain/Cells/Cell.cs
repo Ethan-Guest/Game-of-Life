@@ -2,13 +2,17 @@
 {
     public class Cell
     {
-        // Initialize cell to start dead
+        /// <summary>
+        ///     Initialize cell to start dead
+        /// </summary>
         public Cell()
         {
             CellState = CellState.Dead;
         }
 
-        // State of the cell
+        /// <summary>
+        ///     State of the cell
+        /// </summary>
         public CellState CellState { get; set; }
     }
 }

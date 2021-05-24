@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace GOL
 {
+    /// <summary>
+    ///     Options dialog class
+    /// </summary>
     public partial class OptionsDialog : Form
     {
         public OptionsDialog()
@@ -14,6 +17,9 @@ namespace GOL
         public int UniverseWidth { get; set; }
         public int UniverseHeight { get; set; }
 
+        /// <summary>
+        ///     Options ok
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             Interval = int.Parse(TimerIntervalNumeric.Text);
@@ -23,6 +29,9 @@ namespace GOL
             Close();
         }
 
+        /// <summary>
+        ///     Options cancel
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
