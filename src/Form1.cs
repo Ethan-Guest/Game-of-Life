@@ -148,8 +148,6 @@ namespace GOL
             scratchPad = temp;
             generations++;
             toolStripStatusLabelGenerations.Text = $@"Generations = {generations}";
-            AliveCells.Text = $@"Alive = {aliveCells}";
-
             graphicsPanel1.Invalidate();
         }
 
@@ -202,17 +200,20 @@ namespace GOL
 
                 if (gridToolStripMenuItem.Checked)
                     e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
+
+                AliveCells.Text = $@"Alive = {aliveCells}";
             }
 
             if (isHUDVisible)
             {
+                var type = fToolStripMenuItem.Checked ? "Finite" : "Toroidal";
                 var font = new Font("Arial", 15f);
                 var stringFormat = new StringFormat();
-                stringFormat.Alignment = StringAlignment.Near;
-                stringFormat.LineAlignment = StringAlignment.Center;
+                stringFormat.Alignment = StringAlignment.Far;
+                stringFormat.LineAlignment = StringAlignment.Near;
                 var rect = new Rectangle(0, 0, 100, 100);
                 e.Graphics.DrawString(
-                    $@"Generations: {generations}{Environment.NewLine}Cell Count: {aliveCells}{Environment.NewLine}Boundary Type: {Environment.NewLine}Universe Size: (Width={universe.GetLength(0)}, Height={universe.GetLength(1)})",
+                    $@"Generations: {generations}{Environment.NewLine}Cell Count: {aliveCells}{Environment.NewLine}Boundary Type: {type}{Environment.NewLine}Universe Size: (Width={universe.GetLength(0)}, Height={universe.GetLength(1)})",
                     font, Brushes.WhiteSmoke, ClientRectangle, stringFormat);
             }
 
@@ -242,6 +243,7 @@ namespace GOL
                 scratchPad[x, y].CellState =
                     scratchPad[x, y].CellState == CellState.Alive ? CellState.Dead : CellState.Alive;
 
+                aliveCells++;
                 // Tell Windows you need to repaint
                 graphicsPanel1.Invalidate();
             }
