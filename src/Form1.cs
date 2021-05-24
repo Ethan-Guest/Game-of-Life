@@ -445,17 +445,12 @@ namespace GOL
             {
                 var writer = new StreamWriter(dlg.FileName);
 
-                // Write any comments you want to include first.
-                // Prefix all comment strings with an exclamation point.
-                // Use WriteLine to write the strings to the file. 
-                // It appends a CRLF for you.
                 writer.WriteLine("!This cell file was saved from Ethan Guest's Game of Life project.");
 
                 // Iterate through the universe one row at a time.
                 for (var y = 0; y < universe.GetLength(1); y++)
                 {
                     var currentRow = string.Empty;
-
                     for (var x = 0; x < universe.GetLength(0); x++)
                         if (universe[x, y].CellState == CellState.Alive)
                             currentRow += "O";
@@ -481,39 +476,23 @@ namespace GOL
                 var maxHeight = 0;
                 var yPos = 0;
 
-                // Iterate through the file once to get its size.
                 while (!reader.EndOfStream)
                 {
-                    // Read one row at a time.
                     var row = reader.ReadLine();
-
-                    // If the row begins with '!' then it is a comment
-                    // and should be ignored.
                     if (row[0] == '!') continue;
-
-                    // If the row is not a comment then it is a row of cells.
-                    // Increment the maxHeight variable for each row read.
-
-                    maxHeight++;
-
-                    // Get the length of the current row string
-                    // and adjust the maxWidth variable if necessary.
-
+                    if (row[0] != '!') maxHeight++;
                     maxWidth = row.Length;
                 }
 
                 InitializeUniverse(maxWidth, maxHeight);
 
-                // Reset the file pointer back to the beginning of the file.
                 reader.BaseStream.Seek(0, SeekOrigin.Begin);
 
                 // Iterate through the file again, this time reading in the cells.
                 while (!reader.EndOfStream)
                 {
                     var row = reader.ReadLine();
-
                     if (row[0] == '!') continue;
-
                     for (var xPos = 0; xPos < row.Length; xPos++)
                         universe[xPos, yPos].CellState = row[xPos] == 'O' ? CellState.Alive : CellState.Dead;
                     yPos++;
