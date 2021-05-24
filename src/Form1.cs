@@ -9,8 +9,13 @@ namespace GOL
 {
     public partial class Form1 : Form
     {
+        // Heads up display
+        private readonly bool isHUDVisible = true;
+
         // The Timer class
         private readonly Timer timer = new Timer();
+
+        private int aliveCells;
 
         // Color of the cell
         private Color cellColor = Color.LimeGreen;
@@ -26,6 +31,7 @@ namespace GOL
 
         // The universe array
         private Cell[,] universe;
+
 
         public Form1()
         {
@@ -58,7 +64,12 @@ namespace GOL
                 scratchPad[index0, index1] = new Cell();
         }
 
-        // Count neighbor methods
+        /// <summary>
+        ///     Count neighbor finite method
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         private int CountNeighborsFinite(int x, int y)
         {
             var liveNeighbors = 0;
@@ -80,6 +91,12 @@ namespace GOL
             return liveNeighbors;
         }
 
+        /// <summary>
+        ///     Count neighbor toroidal method
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         private int CountNeighborsToroidal(int x, int y)
         {
             var liveNeighbors = 0;
@@ -104,7 +121,7 @@ namespace GOL
         // Calculate the next generation of cells
         private void NextGeneration()
         {
-            var aliveCells = 0;
+            aliveCells = 0;
             for (var x = 0; x < universe.GetLength(0); x++)
             for (var y = 0; y < universe.GetLength(1); y++)
             {
@@ -185,6 +202,18 @@ namespace GOL
 
                 if (gridToolStripMenuItem.Checked)
                     e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
+            }
+
+            if (isHUDVisible)
+            {
+                var font = new Font("Arial", 15f);
+                var stringFormat = new StringFormat();
+                stringFormat.Alignment = StringAlignment.Near;
+                stringFormat.LineAlignment = StringAlignment.Center;
+                var rect = new Rectangle(0, 0, 100, 100);
+                e.Graphics.DrawString(
+                    $@"Generations: {generations}{Environment.NewLine}Cell Count: {aliveCells}{Environment.NewLine}Boundary Type: {Environment.NewLine}Universe Size: (Width={universe.GetLength(0)}, Height={universe.GetLength(1)})",
+                    font, Brushes.WhiteSmoke, ClientRectangle, stringFormat);
             }
 
             // Cleaning up pens and brushes

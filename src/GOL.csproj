@@ -89,6 +89,7 @@
         <Compile Include="Properties\Resources.Designer.cs">
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
+            <DesignTime>True</DesignTime>
         </Compile>
         <EmbeddedResource Include="RandomSeed.resx">
             <DependentUpon>RandomSeed.cs</DependentUpon>
@@ -112,12 +113,18 @@
             <Name>GOL.Domain</Name>
         </ProjectReference>
     </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\NextIcon.ico"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\NextIcon.png"/>
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-           Other similar extension points exist, see Microsoft.Common.targets.
-      <Target Name="BeforeBuild">
-      </Target>
-      <Target Name="AfterBuild">
-      </Target>
-      -->
+             Other similar extension points exist, see Microsoft.Common.targets.
+        <Target Name="BeforeBuild">
+        </Target>
+        <Target Name="AfterBuild">
+        </Target>
+        -->
 </Project>
