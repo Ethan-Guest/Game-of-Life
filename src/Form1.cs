@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using GOL.Domain.Cells;
 using GOL.Properties;
@@ -431,6 +432,40 @@ namespace GOL
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Settings.Default.Save();
+        }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+            var dlg = new SaveFileDialog();
+            dlg.Filter = "All Files|*.*|Cells|*.cells";
+            dlg.FilterIndex = 2;
+            dlg.DefaultExt = "cells";
+
+            if (DialogResult.OK == dlg.ShowDialog())
+            {
+                var writer = new StreamWriter(dlg.FileName);
+
+                // Write any comments you want to include first.
+                // Prefix all comment strings with an exclamation point.
+                // Use WriteLine to write the strings to the file. 
+                // It appends a CRLF for you.
+                writer.WriteLine("!This cell file was saved from Ethan Guest's Game of Life project.");
+
+                // Iterate through the universe one row at a time.
+                for (var y = 0; y < universe.GetLength(1); y++)
+                {
+                    var currentRow = string.Empty;
+
+                    for (var x = 0; x < universe.GetLength(0); x++)
+                        if (universe[x, y].CellState == CellState.Alive)
+                            currentRow += "O";
+                        else
+                            currentRow += ".";
+                    writer.WriteLine(currentRow);
+                }
+
+                writer.Close();
+            }
         }
     }
 }
