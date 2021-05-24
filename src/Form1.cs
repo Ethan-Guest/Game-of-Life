@@ -229,7 +229,7 @@ namespace GOL
         /// <summary>
         ///     Start game tool strip button
         /// </summary>
-        private void cutToolStripButton_Click(object sender, EventArgs e)
+        private void playToolStripButton_Click(object sender, EventArgs e)
         {
             timer.Enabled = true;
             graphicsPanel1.Invalidate();
@@ -238,7 +238,7 @@ namespace GOL
         /// <summary>
         ///     Pause game tool strip button
         /// </summary>
-        private void copyToolStripButton_Click(object sender, EventArgs e)
+        private void pauseToolStripButton_Click(object sender, EventArgs e)
         {
             timer.Enabled = false;
             graphicsPanel1.Invalidate();
@@ -247,7 +247,7 @@ namespace GOL
         /// <summary>
         ///     Move onto next generation tool strip button
         /// </summary>
-        private void pasteToolStripButton_Click(object sender, EventArgs e)
+        private void nextToolStripButton_Click(object sender, EventArgs e)
         {
             NextGeneration();
             graphicsPanel1.Invalidate();
