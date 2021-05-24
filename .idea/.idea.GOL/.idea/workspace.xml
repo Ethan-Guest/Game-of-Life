@@ -7,8 +7,7 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add context sensitive menu, neighbor count buttons do not work">
       <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
@@ -28,6 +27,8 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Game of Life/Game-of-Life/src/Form1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Game of Life/Game-of-Life/src/Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/79/441f55df/Number.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -46,8 +47,8 @@
       <option value="$PROJECT_DIR$/src/Properties/Settings.settings" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
-      <option value="$PROJECT_DIR$/src/Form1.cs" />
       <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
@@ -147,6 +148,7 @@
       <workItem from="1621816819215" duration="4177000" />
       <workItem from="1621825748945" duration="1637000" />
       <workItem from="1621827625650" duration="622000" />
+      <workItem from="1621828667598" duration="445000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -379,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621826457509</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add context sensitive menu, neighbor count buttons do not work">
+      <created>1621828712424</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1621828712424</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +410,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="got rules working" />
     <MESSAGE value="change stuff" />
     <MESSAGE value="formatting, use switch statement for rules" />
     <MESSAGE value="adjust window size and position" />
@@ -426,7 +434,8 @@
     <MESSAGE value="add open file tool strip button" />
     <MESSAGE value="rename play, pause and next tool strip items" />
     <MESSAGE value="clean up various lines in Form1.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up various lines in Form1.cs" />
+    <MESSAGE value="add context sensitive menu, neighbor count buttons do not work" />
+    <option name="LAST_COMMIT_MESSAGE" value="add context sensitive menu, neighbor count buttons do not work" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

@@ -271,8 +271,14 @@ namespace GOL
         /// </summary>
         private void tToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Tool strip option
             fToolStripMenuItem.Checked = false;
             tToolStripMenuItem.Checked = true;
+
+            // Context menu option
+            finiteToolStripMenuItem.Checked = false;
+            toroidalToolStripMenuItem.Checked = true;
+
             graphicsPanel1.Invalidate();
         }
 
@@ -283,6 +289,9 @@ namespace GOL
         {
             tToolStripMenuItem.Checked = false;
             fToolStripMenuItem.Checked = true;
+
+            toroidalToolStripMenuItem.Checked = false;
+            finiteToolStripMenuItem.Checked = true;
             graphicsPanel1.Invalidate();
         }
 
