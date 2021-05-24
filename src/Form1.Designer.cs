@@ -39,6 +39,7 @@ namespace GOL
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hUDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -80,6 +81,7 @@ namespace GOL
             this.toroidalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.hUDToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.colorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cellColorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -152,10 +154,21 @@ namespace GOL
             // 
             // viewToolStripMenuItem
             // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.tToolStripMenuItem, this.fToolStripMenuItem, this.toolStripSeparator3, this.showNeighborCountToolStripMenuItem, this.gridToolStripMenuItem});
+            this.viewToolStripMenuItem.Checked = true;
+            this.viewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.hUDToolStripMenuItem, this.tToolStripMenuItem, this.fToolStripMenuItem, this.toolStripSeparator3, this.showNeighborCountToolStripMenuItem, this.gridToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
+            // 
+            // hUDToolStripMenuItem
+            // 
+            this.hUDToolStripMenuItem.Checked = true;
+            this.hUDToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.hUDToolStripMenuItem.Name = "hUDToolStripMenuItem";
+            this.hUDToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.hUDToolStripMenuItem.Text = "HUD";
+            this.hUDToolStripMenuItem.Click += new System.EventHandler(this.hUDToolStripMenuItem_Click);
             // 
             // tToolStripMenuItem
             // 
@@ -407,9 +420,9 @@ namespace GOL
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.newToolStripMenuItem1, this.openToolStripMenuItem1, this.saveToolStripMenuItem1, this.toolStripSeparator5, this.toroidalToolStripMenuItem, this.finiteToolStripMenuItem, this.toolStripSeparator9, this.colorsToolStripMenuItem, this.optionsToolStripMenuItem1});
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.newToolStripMenuItem1, this.openToolStripMenuItem1, this.saveToolStripMenuItem1, this.toolStripSeparator5, this.toroidalToolStripMenuItem, this.finiteToolStripMenuItem, this.toolStripSeparator9, this.hUDToolStripMenuItem1, this.colorsToolStripMenuItem, this.optionsToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 170);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 192);
             // 
             // newToolStripMenuItem1
             // 
@@ -457,6 +470,15 @@ namespace GOL
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(113, 6);
+            // 
+            // hUDToolStripMenuItem1
+            // 
+            this.hUDToolStripMenuItem1.Checked = true;
+            this.hUDToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.hUDToolStripMenuItem1.Name = "hUDToolStripMenuItem1";
+            this.hUDToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.hUDToolStripMenuItem1.Text = "HUD";
+            this.hUDToolStripMenuItem1.Click += new System.EventHandler(this.hUDToolStripMenuItem_Click);
             // 
             // colorsToolStripMenuItem
             // 
@@ -529,6 +551,10 @@ namespace GOL
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ToolStripMenuItem hUDToolStripMenuItem1;
+
+        private System.Windows.Forms.ToolStripMenuItem hUDToolStripMenuItem;
 
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
 

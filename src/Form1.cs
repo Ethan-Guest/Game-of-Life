@@ -9,9 +9,6 @@ namespace GOL
 {
     public partial class Form1 : Form
     {
-        // Heads up display
-        private readonly bool isHUDVisible = true;
-
         // The Timer class
         private readonly Timer timer = new Timer();
 
@@ -25,6 +22,9 @@ namespace GOL
 
         // Drawing colors
         private Color gridColor = Color.FromArgb(29, 29, 29);
+
+        // Heads up display
+        private bool isHUDVisible = true;
 
         // The ScratchPad array
         private Cell[,] scratchPad;
@@ -541,6 +541,14 @@ namespace GOL
                 reader.Close();
                 graphicsPanel1.Invalidate();
             }
+        }
+
+        private void hUDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hUDToolStripMenuItem.Checked = !hUDToolStripMenuItem.Checked;
+            isHUDVisible = hUDToolStripMenuItem.Checked;
+            hUDToolStripMenuItem1.Checked = !hUDToolStripMenuItem1.Checked;
+            graphicsPanel1.Invalidate();
         }
     }
 }
