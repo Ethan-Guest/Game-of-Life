@@ -12,6 +12,7 @@ namespace GOL
         // The Timer class
         private readonly Timer timer = new Timer();
 
+        // Live cell count
         private int aliveCells;
 
         // Color of the cell
@@ -20,7 +21,7 @@ namespace GOL
         // Generation count
         private int generations;
 
-        // Drawing colors
+        // Color of the grid
         private Color gridColor = Color.FromArgb(29, 29, 29);
 
         // Heads up display
@@ -33,6 +34,7 @@ namespace GOL
         private Cell[,] universe;
 
 
+        // Initialize
         public Form1()
         {
             InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
@@ -65,7 +67,7 @@ namespace GOL
         }
 
         /// <summary>
-        ///     Count neighbor finite method
+        ///     Finite method
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
@@ -92,7 +94,7 @@ namespace GOL
         }
 
         /// <summary>
-        ///     Count neighbor toroidal method
+        ///     Toroidal method
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
@@ -130,6 +132,8 @@ namespace GOL
                 var liveNeighbors = tToolStripMenuItem.Checked
                     ? CountNeighborsToroidal(x, y)
                     : CountNeighborsFinite(x, y);
+
+                // Rules
                 switch (universe[x, y].CellState)
                 {
                     case CellState.Alive when liveNeighbors < 2:
@@ -157,6 +161,9 @@ namespace GOL
             NextGeneration();
         }
 
+        /// <summary>
+        ///     Graphics panel 1
+        /// </summary>
         private void graphicsPanel1_Paint(object sender, PaintEventArgs e)
         {
             // Calculate the width and height of each cell in pixels
@@ -185,7 +192,7 @@ namespace GOL
                 // Fill the cell with a brush if alive
                 if (universe[x, y].CellState == CellState.Alive)
                 {
-                    // Add neighborCount numbers
+                    // Add neighbor count numbers
                     e.Graphics.FillRectangle(cellBrush, cellRect);
                     var font = new Font("Arial", 8f);
                     var stringFormat = new StringFormat();
@@ -194,16 +201,21 @@ namespace GOL
                     var liveNeighbors = tToolStripMenuItem.Checked
                         ? CountNeighborsToroidal(x, y)
                         : CountNeighborsFinite(x, y);
+
+                    // Toggle Neighbor count
                     if (showNeighborCountToolStripMenuItem.Checked)
                         e.Graphics.DrawString(liveNeighbors.ToString(), font, Brushes.Black, cellRect, stringFormat);
                 }
 
+                // Toggle grid
                 if (gridToolStripMenuItem.Checked)
                     e.Graphics.DrawRectangle(gridPen, cellRect.X, cellRect.Y, cellRect.Width, cellRect.Height);
 
+                // Update alive cell count
                 AliveCells.Text = $@"Alive = {aliveCells}";
             }
 
+            // Heads up display
             if (isHUDVisible)
             {
                 var type = fToolStripMenuItem.Checked ? "Finite" : "Toroidal";
@@ -222,6 +234,9 @@ namespace GOL
             cellBrush.Dispose();
         }
 
+        /// <summary>
+        ///     Graphics panel 1 mouse click event
+        /// </summary>
         private void graphicsPanel1_MouseClick(object sender, MouseEventArgs e)
         {
             // If the left mouse button was clicked
@@ -243,7 +258,9 @@ namespace GOL
                 scratchPad[x, y].CellState =
                     scratchPad[x, y].CellState == CellState.Alive ? CellState.Dead : CellState.Alive;
 
+                // Update alive cell count
                 aliveCells++;
+
                 // Tell Windows you need to repaint
                 graphicsPanel1.Invalidate();
             }
@@ -276,7 +293,7 @@ namespace GOL
         }
 
         /// <summary>
-        ///     Move onto next generation tool strip button
+        ///     Next tool strip button
         /// </summary>
         private void nextToolStripButton_Click(object sender, EventArgs e)
         {
@@ -291,8 +308,11 @@ namespace GOL
         {
             InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
             generations = 0;
+
+            // Reset footer text
             toolStripStatusLabelGenerations.Text = $"Generations = {generations}";
             AliveCells.Text = $"Alive = {0}";
+
             graphicsPanel1.Invalidate();
         }
 
@@ -318,11 +338,14 @@ namespace GOL
         /// </summary>
         private void fToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Tool strip option
             tToolStripMenuItem.Checked = false;
             fToolStripMenuItem.Checked = true;
 
+            // Context menu option
             toroidalToolStripMenuItem.Checked = false;
             finiteToolStripMenuItem.Checked = true;
+
             graphicsPanel1.Invalidate();
         }
 
@@ -332,6 +355,7 @@ namespace GOL
         private void fromSeedToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dlg = new RandomSeed();
+
             if (DialogResult.OK == dlg.ShowDialog())
             {
                 var s = new Random(dlg.SeedValue);
@@ -352,6 +376,7 @@ namespace GOL
         private void fromTimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var s = new Random();
+
             for (var x = 0; x < universe.GetLength(0); x++)
             for (var y = 0; y < universe.GetLength(1); y++)
             {
@@ -371,6 +396,9 @@ namespace GOL
             graphicsPanel1.Invalidate();
         }
 
+        /// <summary>
+        ///     Options dialog
+        /// </summary>
         private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dlg = new OptionsDialog();
@@ -454,7 +482,7 @@ namespace GOL
         }
 
         /// <summary>
-        ///     Reload settings to previous saved settings
+        ///     Reload settings to last saved settings
         /// </summary>
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -484,7 +512,6 @@ namespace GOL
             if (DialogResult.OK == dlg.ShowDialog())
             {
                 var writer = new StreamWriter(dlg.FileName);
-
                 writer.WriteLine("!This cell file was saved from Ethan Guest's Game of Life project.");
 
                 // Iterate through the universe one row at a time.
@@ -525,7 +552,6 @@ namespace GOL
                 }
 
                 InitializeUniverse(maxWidth, maxHeight);
-
                 reader.BaseStream.Seek(0, SeekOrigin.Begin);
 
                 // Iterate through the file again, this time reading in the cells.
@@ -543,6 +569,7 @@ namespace GOL
             }
         }
 
+        // Sync hud option with tool strip and context menu
         private void hUDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             hUDToolStripMenuItem.Checked = !hUDToolStripMenuItem.Checked;
