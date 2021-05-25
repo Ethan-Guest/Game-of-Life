@@ -136,6 +136,7 @@ namespace GOL
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OptionsDialog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OptionsDialog";
             ((System.ComponentModel.ISupportInitialize) (this.TimerIntervalNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.WidthBox)).EndInit();

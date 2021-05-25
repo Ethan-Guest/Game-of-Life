@@ -7,11 +7,15 @@
     <projectFile>src/GOL.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="add documentation to Form1.cs">
+    <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptionsDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptionsDialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RandomSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/RandomSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GOL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptionsDialog.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptionsDialog.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptionsDialog.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptionsDialog.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Resources.resx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +47,11 @@
       <option value="$PROJECT_DIR$/src/Properties/Settings.Designer.cs" />
       <option value="$PROJECT_DIR$/src/Properties/Settings.settings" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/CellState.cs" />
-      <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
-      <option value="$PROJECT_DIR$/src/Form1.cs" />
       <option value="$PROJECT_DIR$/src/OptionsDialog.cs" />
       <option value="$PROJECT_DIR$/src/RandomSeed.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
@@ -152,7 +156,10 @@
       <workItem from="1621866470206" duration="2264000" />
       <workItem from="1621868764949" duration="643000" />
       <workItem from="1621887061938" duration="180000" />
-      <workItem from="1621887256390" duration="2583000" />
+      <workItem from="1621887256390" duration="3209000" />
+      <workItem from="1621908599646" duration="613000" />
+      <workItem from="1621965278055" duration="303000" />
+      <workItem from="1621967939914" duration="999000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -434,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621889078343</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="finalize documentation">
+      <created>1621889883234</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1621889883234</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +470,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="started dialog box" />
     <MESSAGE value="fixed randomize button" />
     <MESSAGE value="added alive cells status strip" />
     <MESSAGE value="add toggle neighbor count" />
@@ -481,7 +494,8 @@
     <MESSAGE value="fix hud" />
     <MESSAGE value="update readme" />
     <MESSAGE value="add documentation to Form1.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="add documentation to Form1.cs" />
+    <MESSAGE value="finalize documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize documentation" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
