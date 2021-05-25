@@ -33,19 +33,14 @@ namespace GOL
         // The universe array
         private Cell[,] universe;
 
-
         // Initialize
         public Form1()
         {
-            InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
             InitializeComponent();
             // Setup the timer
-            timer.Interval = Settings.Default.Interval; // milliseconds
             timer.Tick += Timer_Tick;
             timer.Enabled = true; // start timer running
-            graphicsPanel1.BackColor = Settings.Default.BackColor;
-            cellColor = Settings.Default.CellColor;
-            gridColor = Settings.Default.GridColor;
+            SetSettings();
         }
 
         /// <summary>
@@ -330,6 +325,8 @@ namespace GOL
             finiteToolStripMenuItem.Checked = false;
             toroidalToolStripMenuItem.Checked = true;
 
+            Settings.Default.Toroidal = tToolStripMenuItem.Checked;
+
             graphicsPanel1.Invalidate();
         }
 
@@ -345,6 +342,8 @@ namespace GOL
             // Context menu option
             toroidalToolStripMenuItem.Checked = false;
             finiteToolStripMenuItem.Checked = true;
+
+            Settings.Default.Toroidal = false;
 
             graphicsPanel1.Invalidate();
         }
@@ -474,11 +473,21 @@ namespace GOL
         private void resetToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Settings.Default.Reset();
+            SetSettings();
+        }
+
+        private void SetSettings()
+        {
             graphicsPanel1.BackColor = Settings.Default.BackColor;
             cellColor = Settings.Default.CellColor;
             gridColor = Settings.Default.GridColor;
             InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
             timer.Interval = Settings.Default.Interval;
+            tToolStripMenuItem.Checked = Settings.Default.Toroidal;
+            fToolStripMenuItem.Checked = !Settings.Default.Toroidal;
+            finiteToolStripMenuItem.Checked = !Settings.Default.Toroidal;
+            toroidalToolStripMenuItem.Checked = Settings.Default.Toroidal;
+            graphicsPanel1.Invalidate();
         }
 
         /// <summary>
@@ -487,11 +496,7 @@ namespace GOL
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Settings.Default.Reload();
-            graphicsPanel1.BackColor = Settings.Default.BackColor;
-            cellColor = Settings.Default.CellColor;
-            gridColor = Settings.Default.GridColor;
-            InitializeUniverse(Settings.Default.UniverseWidth, Settings.Default.UniverseHeight);
-            timer.Interval = Settings.Default.Interval;
+            SetSettings();
         }
 
         /// <summary>

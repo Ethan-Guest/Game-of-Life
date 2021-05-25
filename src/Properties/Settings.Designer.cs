@@ -94,5 +94,17 @@ namespace GOL.Properties {
                 this["BackColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Toroidal {
+            get {
+                return ((bool)(this["Toroidal"]));
+            }
+            set {
+                this["Toroidal"] = value;
+            }
+        }
     }
 }
