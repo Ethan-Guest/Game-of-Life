@@ -8,14 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="feaf2022-6520-4ad5-ba9c-c7e928d2de02" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Cell files/basicShapes.cells" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell files/gosperGliderGun.cells" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cell files/symetricShapes.cells" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GOL/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GOL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GOL.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptionsDialog.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptionsDialog.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptionsDialog.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptionsDialog.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Resources.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Properties/Resources.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +47,8 @@
       <option value="$PROJECT_DIR$/src/OptionsDialog.cs" />
       <option value="$PROJECT_DIR$/src/RandomSeed.cs" />
       <option value="$PROJECT_DIR$/src/GOL.Domain/Cells/Cell.cs" />
-      <option value="$PROJECT_DIR$/src/Form1.cs" />
       <option value="$PROJECT_DIR$/src/Form1.Designer.cs" />
+      <option value="$PROJECT_DIR$/src/Form1.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s7Tx9ZU7eHXlyTBDJJqpdxMJlO" />
@@ -159,7 +156,8 @@
       <workItem from="1621887256390" duration="3209000" />
       <workItem from="1621908599646" duration="613000" />
       <workItem from="1621965278055" duration="303000" />
-      <workItem from="1621967939914" duration="999000" />
+      <workItem from="1621967939914" duration="3942000" />
+      <workItem from="1621977031045" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1620223269863</created>
@@ -448,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621889883234</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="add new icons, add randomize and settings toolstrip button">
+      <created>1621968990435</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1621968990435</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +475,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fixed randomize button" />
     <MESSAGE value="added alive cells status strip" />
     <MESSAGE value="add toggle neighbor count" />
     <MESSAGE value="add option to adjust time between generations - settings &lt; options" />
@@ -495,7 +499,8 @@
     <MESSAGE value="update readme" />
     <MESSAGE value="add documentation to Form1.cs" />
     <MESSAGE value="finalize documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize documentation" />
+    <MESSAGE value="add new icons, add randomize and settings toolstrip button" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new icons, add randomize and settings toolstrip button" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

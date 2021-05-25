@@ -502,6 +502,9 @@ namespace GOL
             Settings.Default.Save();
         }
 
+        /// <summary>
+        ///     Save cell file
+        /// </summary>
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
             var dlg = new SaveFileDialog();
@@ -513,8 +516,6 @@ namespace GOL
             {
                 var writer = new StreamWriter(dlg.FileName);
                 writer.WriteLine("!This cell file was saved from Ethan Guest's Game of Life project.");
-
-                // Iterate through the universe one row at a time.
                 for (var y = 0; y < universe.GetLength(1); y++)
                 {
                     var currentRow = string.Empty;
@@ -530,6 +531,9 @@ namespace GOL
             }
         }
 
+        /// <summary>
+        ///     Open cell file
+        /// </summary>
         private void openToolStripButton_Click(object sender, EventArgs e)
         {
             var dlg = new OpenFileDialog();
@@ -569,7 +573,9 @@ namespace GOL
             }
         }
 
-        // Sync hud option with tool strip and context menu
+        /// <summary>
+        ///     Sync hud option tool strip and context menu
+        /// </summary>
         private void hUDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             hUDToolStripMenuItem.Checked = !hUDToolStripMenuItem.Checked;
