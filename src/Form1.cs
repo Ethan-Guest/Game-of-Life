@@ -115,7 +115,9 @@ namespace GOL
             return liveNeighbors;
         }
 
-        // Calculate the next generation of cells
+        /// <summary>
+        ///     Calculate the next generation of cells
+        /// </summary>
         private void NextGeneration()
         {
             aliveCells = 0;
@@ -150,7 +152,9 @@ namespace GOL
             graphicsPanel1.Invalidate();
         }
 
-        // The event called by the timer every Interval milliseconds.
+        /// <summary>
+        ///     The event called by the timer every Interval milliseconds
+        /// </summary>
         private void Timer_Tick(object sender, EventArgs e)
         {
             NextGeneration();
